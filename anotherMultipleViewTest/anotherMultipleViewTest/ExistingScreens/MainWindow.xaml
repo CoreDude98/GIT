@@ -1,0 +1,20 @@
+﻿<Window x:Class="design2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:design2"
+        mc:Ignorable="d"
+        Title="Warfame Weapon Tool" Height="360" Width="550">
+    <Grid >
+        <Grid HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="544">
+            <DataGrid x:Name="meleeDataGridOutput" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522" />
+            <ComboBox x:Name="menuSelect" HorizontalAlignment="Left" Margin="412,10,0,0" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="optionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0"/>
+            <Label x:Name="viewTitle" Content="Weapon View" Margin="224,9,223,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF020202" FontSize="13.333"/>
+            <Button x:Name="filterBtn" Content="Filter" HorizontalAlignment="Left" Margin="166,13,0,0" VerticalAlignment="Top" Width="50" Background="#FFF0F0F0"/>
+            <TextBox x:Name="searchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
+        </Grid>
+        <Label x:Name="menuLbl" Content="Menu" HorizontalAlignment="Left" Margin="412,8,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

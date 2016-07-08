@@ -55,6 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppTest\about.xaml.cs">
+      <DependentUpon>about.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppTest\comparisongrid.xaml.cs">
+      <DependentUpon>comparisongrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppTest\comparisonSide.xaml.cs">
+      <DependentUpon>comparisonSide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppTest\inventory.xaml.cs">
+      <DependentUpon>inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppTest\stancepolarity.xaml.cs">
+      <DependentUpon>stancepolarity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppTest\weapons.xaml.cs">
+      <DependentUpon>weapons.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ISwitchable.cs" />
     <Compile Include="Screens\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -66,7 +84,56 @@
     <Compile Include="Screens\TestScreen2.xaml.cs">
       <DependentUpon>TestScreen2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="sharedMethods.cs" />
     <Compile Include="Switcher.cs" />
+    <Page Include="AppTest\about.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppTest\comparisongrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppTest\comparisonSide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppTest\inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppTest\stancepolarity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppTest\weapons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExistingScreens\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExistingScreens\Compare.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExistingScreens\compareSide.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExistingScreens\Inventory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExistingScreens\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExistingScreens\Stances.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

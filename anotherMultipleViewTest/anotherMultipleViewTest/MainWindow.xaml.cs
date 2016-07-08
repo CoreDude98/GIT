@@ -24,7 +24,7 @@ namespace anotherMultipleViewTest
         { 
             InitializeComponent();
             Switcher.mainWindow = this;
-            Switcher.Switch(new Screens.MainMenu());  
+            Switcher.Switch(new AppTest.weapons());  
         }
 
     public void Navigate(UserControl nextPage)
