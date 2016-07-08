@@ -8,12 +8,15 @@
        Title="Warfame Weapon Tool" Height="360" Width="550">
     <Grid >
         <Grid HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="544">
-            <DataGrid x:Name="wpMeleeDataGridOutput" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522" />
+            <DataGrid x:Name="wpMeleeDataGridOutput" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522" CanUserAddRows="false" FrozenColumnCount="1">
+               
+                                       
+            </DataGrid>
             <ComboBox x:Name="wpMenuSelect" HorizontalAlignment="Left" Margin="412,10,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="wpOptionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0"/>
+            <Button x:Name="wpOptionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0" Click="wpOptionsBtn_Click"/>
             <Label x:Name="wpViewTitle" Content="Weapon View" Margin="224,9,223,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF020202" FontSize="13.333"/>
             <Button x:Name="wpFilterBtn" Content="Filter" HorizontalAlignment="Left" Margin="166,13,0,0" VerticalAlignment="Top" Width="50" Background="#FFF0F0F0"/>
-            <TextBox x:Name="wpSearchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="wpSearchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light" TextChanged="wpSearchTextInput_TextChanged"/>
         </Grid>
         <Label x:Name="menuLbl" Content="Menu" HorizontalAlignment="Left" Margin="412,8,0,0" VerticalAlignment="Top"/>
     </Grid>

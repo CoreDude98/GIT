@@ -1,0 +1,30 @@
+﻿<Window x:Class="DRAFT_WeaponsMethod.wpSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DRAFT_WeaponsMethod"
+        mc:Ignorable="d"
+        Title="Grid Settings" Height="169.674" Width="453.813">
+    <Grid Background="White">
+        <CheckBox x:Name="checkBox" Content="Melee Stance" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="98" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy1" Content="Physical Damage" HorizontalAlignment="Left" Margin="148,54,0,0" VerticalAlignment="Top" Width="157" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy2" Content="Element Type" HorizontalAlignment="Left" Margin="318,54,0,0" VerticalAlignment="Top" Width="119" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy4" Content="Slide, Leap, Wall Damage" HorizontalAlignment="Left" Margin="148,75,0,0" VerticalAlignment="Top" Width="157" Height="15" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy5" Content="Critical Chance" HorizontalAlignment="Left" Margin="148,95,0,0" VerticalAlignment="Top" Width="157" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy" Content="Critical Damage" HorizontalAlignment="Left" Margin="148,115,0,0" VerticalAlignment="Top" Width="157" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy6" Content="Status Chance" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="118" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy7" Content="Weapon Polarities" HorizontalAlignment="Left" Margin="318,115,0,0" VerticalAlignment="Top" Width="122" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy8" Content="Stance Polarity" HorizontalAlignment="Left" Margin="318,95,0,0" VerticalAlignment="Top" Width="114" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy9" Content="Mastery Unlock" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="107" IsChecked="True"/>
+        <Label x:Name="label" Content="Damage" HorizontalAlignment="Left" Margin="148,28,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="label1" Content="Element" HorizontalAlignment="Left" Margin="318,28,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="label1_Copy1" Content="Polarity" HorizontalAlignment="Left" Margin="318,69,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="label3" Content="Grid Settings" Margin="178,5,178.2,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13.333"/>
+        <Button x:Name="button" Content="Show All" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="75" Background="#FFF0F0F0"/>
+        <Button x:Name="button_Copy" Content="Hide All" HorizontalAlignment="Left" Margin="361,7,0,0" VerticalAlignment="Top" Width="75" Background="#FFF0F0F0"/>
+        <Label x:Name="label1_Copy2" Content="Additional" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <CheckBox x:Name="checkBox_Copy3" Content="Additional Info" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Width="118" IsChecked="True"/>
+
+    </Grid>
+</Window>

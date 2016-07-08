@@ -10,104 +10,87 @@ namespace DRAFT_WeaponsMethod
     {
         public string name
         {
-            get;
-            set;
+            get; set;
         }
 
         public string type
         {
-            get;
-            set;
+            get; set;
         }
 
         public string elementaltype
         {
-            get;
-            set;
+            get; set;
         }
 
         public double damage
         {
-            get;
-            set;
+            get; set;
         }
 
         public double impactdmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double puncturedmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double slashdmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double slidedmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double jumpdmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double walldmg
         {
-            get;
-            set;
+            get; set;
         }
 
         public double critchance
         {
-            get;
-            set;
+            get; set;
         }
 
         public double critdamage
         {
-            get;
-            set;
+            get; set;
         }
 
         public double statuschance
         {
-            get;
-            set;
+            get; set;
         }
 
         public int masteryunlock
         {
-            get;
-            set;
+            get; set;
         }
 
         public string wpnpolarity
         {
-            get;
-            set;
+            get; set;
         }
 
         public string stancepolarity
         {
-            get;
-            set;
+            get; set;
         }
 
         public string addinfo
         {
-            get;
-            set;
+            get; set;
         }
     }
 }

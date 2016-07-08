@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.ComponentModel;
 
 namespace DRAFT_WeaponsMethod
 {
@@ -25,8 +26,10 @@ namespace DRAFT_WeaponsMethod
         {
             InitializeComponent();
             displayGrid();
+            
         }
 
+        wpSettingsWindow win1 = new wpSettingsWindow();
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
 
@@ -67,7 +70,33 @@ namespace DRAFT_WeaponsMethod
             }
             //datagrid grabs the list
             wpMeleeDataGridOutput.ItemsSource = weaponItem;
+
+            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(wpMeleeDataGridOutput.ItemsSource);
+            //view.Filter = searchFilter;
+        }
+
+        //private bool searchFilter(object item)
+        //{
+        //    if (String.IsNullOrEmpty(wpSearchTextInput.Text))
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return ((item as weapons).name.IndexOf(wpSearchTextInput.Text, StringComparison.OrdinalIgnoreCase) >= 0);
+        //    }
+        //}
+
+        private void wpSearchTextInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
             
+        }
+
+        private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            win1.Show();
+
         }
     }
 }
