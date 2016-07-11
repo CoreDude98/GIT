@@ -19,7 +19,7 @@ namespace anotherMultipleViewTest
 
         public static void MenuSelect(object sender, int selectedIndex, int currentIndex)
         {
-            if (selectedIndex != -1)
+            if (selectedIndex != -1 && selectedIndex != currentIndex)
             {
 
                 if (selectedIndex == 0)
@@ -64,7 +64,7 @@ namespace anotherMultipleViewTest
             }
         }
 
-       public static void createMenu(object sender, int selectedIndex)
+       public static List<string> createMenu(object sender)
         {
             List<string> menuList = new List<string>();
             menuList.Add("Melee Weapon Grid");
@@ -74,9 +74,10 @@ namespace anotherMultipleViewTest
             menuList.Add("Stance & Polarity");
             menuList.Add("About");
 
-            var menu = sender as ComboBox;
-            menu.ItemsSource = menuList;
-            menu.SelectedIndex = selectedIndex;
+            //var menu = sender as ComboBox;
+            //menu.ItemsSource = menuList;
+            //menu.SelectedIndex = 0
+            return menuList;
         }
     }
 }

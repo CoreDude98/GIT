@@ -26,8 +26,7 @@ namespace anotherMultipleViewTest.AppTest
         {
             InitializeComponent();
         }
-
-
+        int screenIndex = 0;
 
         public void UtilizeState(object state)
         {
@@ -36,77 +35,17 @@ namespace anotherMultipleViewTest.AppTest
 
         private void menuSelectLoaded(object sender, RoutedEventArgs e)
         {
-            sharedMethods.createMenu((object)sender, 0);
-
-
-
-
-            //List<string> menuList = new List<string>();
-            //menuList.Add("Melee Weapon Grid");
-            //menuList.Add("Comparison Grid");
-            //menuList.Add("Comparison Side by Side");
-            //menuList.Add("Inventory");
-            //menuList.Add("Stance & Polarity");
-            //menuList.Add("About");
-
             var menu = sender as ComboBox;
-            menu.ItemsSource = menuList;
-            menu.SelectedIndex = 0;
+            menu.SelectedIndex = screenIndex;
+            menu.ItemsSource = sharedMethods.createMenu(sender);
         }
 
         private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var menu = sender as ComboBox;
             int selectedIndex = menu.SelectedIndex;
-            int currentIndex = 0;
+            int currentIndex = screenIndex;
             sharedMethods.MenuSelect(sender, selectedIndex, currentIndex);
-
-
-            //var menu = sender as ComboBox;
-            //int selectedIndex = menu.SelectedIndex;
-            //if (menu.SelectedIndex != -1)
-            //{
-
-            //    if (selectedIndex == 0)
-            //    {
-            //        Switcher.Switch(new weapons());
-            //    }
-            //    else
-            //    {
-            //        if (selectedItem == "TestScreen2")
-            //        {
-            //            Switcher.Switch(new comparisongrid());
-            //        }
-            //        else
-            //        {
-            //            if (selectedItem == "TestScreen2")
-            //            {
-            //                Switcher.Switch(new comparisonSide());
-            //            }
-            //            else
-            //            {
-            //                if (selectedItem == "TestScreen2")
-            //                {
-            //                    Switcher.Switch(new inventory());
-            //                }
-            //                else
-            //                {
-            //                    if (selectedItem == "TestScreen2")
-            //                    {
-            //                        Switcher.Switch(new stancepolarity());
-            //                    }
-            //                    else
-            //                    {
-            //                        if (selectedItem == "TestScreen2")
-            //                        {
-            //                            Switcher.Switch(new about());
-            //                        }
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
         }
     }
 

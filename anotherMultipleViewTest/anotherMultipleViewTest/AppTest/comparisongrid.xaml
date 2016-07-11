@@ -7,6 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="330" d:DesignWidth="544">
     <Grid Background="White">
-            
+        <ComboBox x:Name="menuSelect" Margin="389,10,12,0" VerticalAlignment="Top" Loaded="menuSelectLoaded" SelectionChanged="menuSelectSelectionChanged"/>
+
+        <Label x:Name="label" Content="Comparison View" Margin="212,9,193,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13.333"/>
+        <Button x:Name="button" Content="Select Weapons" HorizontalAlignment="Left" Margin="109,14,0,0" VerticalAlignment="Top" Width="91" Background="#FFF0F0F0"/>
+        <DataGrid x:Name="dataGrid" Margin="10,43,12,0" VerticalAlignment="Top" Height="276"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
     </Grid>
 </UserControl>

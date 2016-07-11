@@ -13,16 +13,40 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace anotherMultipleViewTest.AppTest
 {
     /// <summary>
-    /// Interaction logic for stancepolarity.xaml
+    /// Interaction logic for weapons.xaml
     /// </summary>
-    public partial class stancepolarity : UserControl
+    public partial class stancepolarity : UserControl, ISwitchable
     {
         public stancepolarity()
         {
             InitializeComponent();
         }
+        int screenIndex = 4;
+
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void menuSelectLoaded(object sender, RoutedEventArgs e)
+        {
+            var menu = sender as ComboBox;
+            menu.SelectedIndex = screenIndex;
+            menu.ItemsSource = sharedMethods.createMenu(sender);
+        }
+
+        private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var menu = sender as ComboBox;
+            int selectedIndex = menu.SelectedIndex;
+            int currentIndex = screenIndex;
+            sharedMethods.MenuSelect(sender, selectedIndex, currentIndex);
+        }
     }
+
 }

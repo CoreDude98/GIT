@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="Warfame Weapon Tool" Height="360" Width="550">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="329" VerticalAlignment="Top" Width="542">
-            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522"/>
-        </Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522"/>
         <Label x:Name="label" Content="Inventory View" Margin="220,9,219,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13.333"/>
         <Button x:Name="button" Content="Add/Delete" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="75" Background="#FFF0F0F0"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="412,10,0,0" VerticalAlignment="Top" Width="120"/>
