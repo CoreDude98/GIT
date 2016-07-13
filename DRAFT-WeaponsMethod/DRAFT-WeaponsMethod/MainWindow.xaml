@@ -18,6 +18,5 @@
             <Button x:Name="wpFilterBtn" Content="Filter" HorizontalAlignment="Left" Margin="166,13,0,0" VerticalAlignment="Top" Width="50" Background="#FFF0F0F0"/>
             <TextBox x:Name="wpSearchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light" TextChanged="wpSearchTextInput_TextChanged"/>
         </Grid>
-        <Label x:Name="menuLbl" Content="Menu" HorizontalAlignment="Left" Margin="412,8,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

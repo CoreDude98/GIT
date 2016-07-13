@@ -1,0 +1,42 @@
+﻿<Window x:Class="button_SearchDataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:button_SearchDataGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DataGrid x:Name="weaponsDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Loaded="weaponsDataGridLoaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
+                <DataGridTextColumn Header="Element Type" Binding="{Binding elementaltype}"/>
+                <DataGridTextColumn Header="Damage" Binding="{Binding damage}"/>
+                <DataGridTextColumn Header="Impact Damage" Binding="{Binding impactdmg}"/>
+                <DataGridTextColumn Header="Puncture Damage" Binding="{Binding puncturedmg}"/>
+                <DataGridTextColumn Header="Slash Damage" Binding="{Binding slashdmg}"/>
+                <DataGridTextColumn Header="Slide Damage" Binding="{Binding slidedmg}"/>
+                <DataGridTextColumn Header="Jump Damage" Binding="{Binding jumpdmg}"/>
+                <DataGridTextColumn Header="Wall Damage" Binding="{Binding walldmg}"/>
+                <DataGridTextColumn Header="Crit Chance" Binding="{Binding critchance}"/>
+                <DataGridTextColumn Header="Crit Damage" Binding="{Binding critdamage}"/>
+                <DataGridTextColumn Header="Status Chance" Binding="{Binding statuschance}"/>
+                <DataGridTextColumn Header="Mastery Unlock" Binding="{Binding masteryunlock}"/>
+                <DataGridTextColumn Header="Weapon Polarity" Binding="{Binding wpnpolarity}"/>
+                <DataGridTextColumn Header="Stance Polarity" Binding="{Binding stancepolarity}"/>
+                
+                
+                <DataGridTemplateColumn Header="Additional Info">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Example" Click="addInfoButtonClick"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
