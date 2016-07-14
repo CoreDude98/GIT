@@ -46,8 +46,8 @@ namespace DRAFT_WeaponsMethod
             string[] weaponElement = new string[16];
             //Create new list (fileTopic = fileTopic.cs)
             List<weapons> weaponItem = new List<weapons>();
-            ListCollectionView collection = new ListCollectionView(weaponItem);
-            wpMeleeDataGridOutput.ItemsSource = collection;
+            //ListCollectionView collection = new ListCollectionView(weaponItem);
+            wpMeleeDataGridOutput.ItemsSource = weaponItem;
             //split csv into arrays
             for (int i = 0; i < meleeWeapons.Length; i++)
             {
@@ -110,7 +110,8 @@ namespace DRAFT_WeaponsMethod
 
             if (!string.IsNullOrEmpty(searchValue))
             {
-                cv.Filter = o => {
+                cv.Filter = o =>
+                {
                     /* change to get data row value */
                     weapons p = o as weapons;
                     return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
@@ -119,11 +120,11 @@ namespace DRAFT_WeaponsMethod
             }
             else
             {
- 
+
             }
         }
 
-        
+
         //cv.Filter = o =>
         //{
         //    weapons p = o as weapons;
@@ -135,7 +136,7 @@ namespace DRAFT_WeaponsMethod
         //    else
         //        return false;
         //};
-        
+
 
 
 

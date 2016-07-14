@@ -76,9 +76,21 @@ namespace button_SearchDataGrid
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            TextBox t = (TextBox)sender;
             string searchValue = searchTxt.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(weaponsDataGrid.ItemsSource);
 
-            
+            if (!string.IsNullOrEmpty(searchValue))
+            {
+                cv.Filter = o =>
+                {
+                    /* change to get data row value */
+                    weapons p = o as weapons;
+                    return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
+                    /* end change to get data row value */
+                };
+            }
+
         }
     }
 
