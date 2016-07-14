@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <DataGrid x:Name="weaponsDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Loaded="weaponsDataGridLoaded">
+        <DataGrid x:Name="weaponsDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Loaded="weaponsDataGridLoaded" Margin="0,29,0.4,-0.2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
                 <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
@@ -38,5 +38,6 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="searchTxt" HorizontalAlignment="Left" Height="23" Margin="0,6,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
     </Grid>
 </Window>

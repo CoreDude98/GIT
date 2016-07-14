@@ -28,6 +28,7 @@ namespace button_SearchDataGrid
             
         }
         List<weapons> weaponList;
+        //ICollectionView view = CollectionViewSource.GetDefaultView(weaponList);
 
         private void weaponsDataGridLoaded(object sender, RoutedEventArgs e)
         {
@@ -60,10 +61,24 @@ namespace button_SearchDataGrid
             weaponsDataGrid.ItemsSource = weapon;
         }
 
-        private void addInfoButtonClick(object sender, RoutedEventArgs e)
+        public void addInfoButtonClick(object sender, RoutedEventArgs e)
         {
             int index = weaponsDataGrid.SelectedIndex;
-            MessageBox.Show(addInfoList[index]);
+            //int rowIndex = weaponsDataGrid.Rows[index].Cells[16].Value.ToString();
+            //weapons.findInfo(index);
+            string addInfoText = weapons.addInfoList[index];
+            if (addInfoText == "")
+            {
+                addInfoText = "There is no additional information to display about this weapon.";
+            }
+            MessageBox.Show(addInfoText, "Additional Information for " );
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchValue = searchTxt.Text;
+
+            
         }
     }
 

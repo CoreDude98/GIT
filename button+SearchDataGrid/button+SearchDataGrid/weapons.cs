@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
+using button_SearchDataGrid;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace button_SearchDataGrid
 {
-    class weapons
+    public class weapons
     {
+        
+
         public string name
         {
             get; set;
         }
 
         public string type
-        {
+        { 
             get; set;
         }
 
@@ -92,7 +96,7 @@ namespace button_SearchDataGrid
         {
             get; set;
         }
-        
+
         public weapons(string line)
         {
             string[] parts = line.Split(',');
@@ -112,12 +116,16 @@ namespace button_SearchDataGrid
             this.masteryunlock = int.Parse(parts[13]);
             this.wpnpolarity = parts[14];
             this.stancepolarity = parts[15];
-
-            List<string> addInfoList = new List<string>();
             addInfoList.Add(parts[16]);           
-            
-            
+        }
 
+        public static List<string> addInfoList = new List<string>();
+
+        public static void findInfo(int index)
+        {
+            string addInfoText = addInfoList[index];
+            MessageBox.Show(addInfoText);
+            
         }
     }
 }

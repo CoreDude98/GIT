@@ -16,7 +16,7 @@
             <Button x:Name="wpOptionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0" Click="wpOptionsBtn_Click"/>
             <Label x:Name="wpViewTitle" Content="Weapon View" Margin="224,9,223,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF020202" FontSize="13.333"/>
             <Button x:Name="wpFilterBtn" Content="Filter" HorizontalAlignment="Left" Margin="166,13,0,0" VerticalAlignment="Top" Width="50" Background="#FFF0F0F0"/>
-            <TextBox x:Name="wpSearchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light" TextChanged="wpSearchTextInput_TextChanged"/>
+            <TextBox x:Name="wpSearchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light" TextChanged="wpSearchTextInput_TextChanged" />
         </Grid>
     </Grid>
 </Window>

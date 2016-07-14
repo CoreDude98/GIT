@@ -26,21 +26,28 @@ namespace DRAFT_WeaponsMethod
         {
             InitializeComponent();
             displayGrid();
+            List<weapons> weaponItem;
             
+
         }
+
 
         wpSettingsWindow win1 = new wpSettingsWindow();
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
 
+
+
         private void displayGrid()
         {
             meleeWeapons = File.ReadAllLines(currentFile);
             //display contents of array in datagrid
-            //Create array to hold items from csv, size of 5 as there are 5 comma seperated items in each line
+            
             string[] weaponElement = new string[16];
             //Create new list (fileTopic = fileTopic.cs)
             List<weapons> weaponItem = new List<weapons>();
+            ListCollectionView collection = new ListCollectionView(weaponItem);
+            wpMeleeDataGridOutput.ItemsSource = collection;
             //split csv into arrays
             for (int i = 0; i < meleeWeapons.Length; i++)
             {
@@ -59,38 +66,79 @@ namespace DRAFT_WeaponsMethod
                     slidedmg = double.Parse(weaponElement[7]),
                     jumpdmg = double.Parse(weaponElement[8]),
                     walldmg = double.Parse(weaponElement[9]),
-                    critchance = double.Parse(weaponElement[10])*100,
+                    critchance = double.Parse(weaponElement[10]) * 100,
                     critdamage = double.Parse(weaponElement[11]),
-                    statuschance = double.Parse(weaponElement[12])*100,
+                    statuschance = double.Parse(weaponElement[12]) * 100,
                     masteryunlock = int.Parse(weaponElement[13]),
                     wpnpolarity = weaponElement[14],
                     stancepolarity = weaponElement[15],
                     addinfo = weaponElement[16]
                 });
             }
-            //datagrid grabs the list
-            wpMeleeDataGridOutput.ItemsSource = weaponItem;
 
-            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(wpMeleeDataGridOutput.ItemsSource);
-            //view.Filter = searchFilter;
+
+
+            //datagrid grabs the list
+            //wpMeleeDataGridOutput.ItemsSource = weaponItem;
+
+            //if (cvWeapons != null)
+            //{
+            //    wpMeleeDataGridOutput.AutoGenerateColumns = true;
+            //    wpMeleeDataGridOutput.ItemsSource = cvWeapons;
+            //    cvWeapons.Filter = TextFilter;
+            //}
         }
 
-        //private bool searchFilter(object item)
+        //public bool TextFilter(object o)
         //{
-        //    if (String.IsNullOrEmpty(wpSearchTextInput.Text))
-        //    {
+        //    weapons p = (o as weapons);
+        //    if (p == null)
+        //        return false;
+
+        //    if (p.name.Contains(wpSearchTextInput.Text))
         //        return true;
-        //    }
         //    else
-        //    {
-        //        return ((item as weapons).name.IndexOf(wpSearchTextInput.Text, StringComparison.OrdinalIgnoreCase) >= 0);
-        //    }
+        //        return false;
         //}
+
 
         private void wpSearchTextInput_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            TextBox t = (TextBox)sender;
+            string searchValue = wpSearchTextInput.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(wpMeleeDataGridOutput.ItemsSource);
+
+            if (!string.IsNullOrEmpty(searchValue))
+            {
+                cv.Filter = o => {
+                    /* change to get data row value */
+                    weapons p = o as weapons;
+                    return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
+                    /* end change to get data row value */
+                };
+            }
+            else
+            {
+ 
+            }
         }
+
+        
+        //cv.Filter = o =>
+        //{
+        //    weapons p = o as weapons;
+        //    if (t.Name == null)
+        //        return false;
+
+        //    if (t.Name.Contains(wpSearchTextInput.Text))
+        //        return true;
+        //    else
+        //        return false;
+        //};
+        
+
+
+
 
         private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
         {
