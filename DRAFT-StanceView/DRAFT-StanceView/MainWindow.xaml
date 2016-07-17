@@ -19,15 +19,15 @@
         <Rectangle Fill="#FFF0F0F0" HorizontalAlignment="Left" Height="169" Margin="299,151,0,0" Stroke="Black" VerticalAlignment="Top" Width="108"/>
         <Label x:Name="label3" Content="Madurai" HorizontalAlignment="Left" Margin="215,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <Label x:Name="label1_Copy2" Content="Weapon Polarities" HorizontalAlignment="Left" Margin="299,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
-        <Rectangle Fill="#FFF0F0F0" HorizontalAlignment="Left" Height="29" Margin="325,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="29"/>
         <Label x:Name="label3_Copy" Content="Madurai" HorizontalAlignment="Left" Margin="354,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <Label x:Name="label4" Content="1" HorizontalAlignment="Left" Margin="296,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <Label x:Name="label4_Copy" Content="x" HorizontalAlignment="Left" Margin="309,76,0,0" VerticalAlignment="Top" Height="25"/>
-        <Rectangle Fill="#FFF0F0F0" HorizontalAlignment="Left" Height="29" Margin="445,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="29"/>
         <Label x:Name="label3_Copy1" Content="Naramon" HorizontalAlignment="Left" Margin="474,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <Label x:Name="label4_Copy1" Content="1" HorizontalAlignment="Left" Margin="416,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <Label x:Name="label4_Copy2" Content="x" HorizontalAlignment="Left" Margin="429,76,0,0" VerticalAlignment="Top" Height="25"/>
-        <Image x:Name="stancePol" HorizontalAlignment="Left" Height="29" Margin="181,76,0,0" VerticalAlignment="Top" Width="29"/>
+        <Image x:Name="stancePolImg" HorizontalAlignment="Left" Height="29" Margin="181,76,0,0" VerticalAlignment="Top" Width="29"/>
+        <Image x:Name="wpnPol1Img" HorizontalAlignment="Left" Height="29" Margin="325,74,0,0" VerticalAlignment="Top" Width="29"/>
+        <Image x:Name="wpnPol2Img" HorizontalAlignment="Left" Height="29" Margin="445,74,0,0" VerticalAlignment="Top" Width="29"/>
 
     </Grid>
 </Window>

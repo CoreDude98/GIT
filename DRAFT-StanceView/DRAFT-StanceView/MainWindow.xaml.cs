@@ -25,21 +25,15 @@ namespace DRAFT_StanceView
         {
             InitializeComponent();
             displayGrid();
-
-            //Image i = new Image();
-            //BitmapImage source = new BitmapImage();
-
-            //src.BeginInit();
-            //src.UriSource = new Uri("picture.jpg", UriKind.Relative);
-            //src.EndInit();
-
-            stancePol.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Madurai_Pol.png"));
+            displayImages();
+            
 
 
         }
 
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
+        
 
 
 
@@ -49,7 +43,7 @@ namespace DRAFT_StanceView
             meleeWeapons = File.ReadAllLines(currentFile);
             //display contents of array in datagrid
 
-            string[] weaponElement = new string[16];
+            string[] weaponElement = new string[2];
             //Create new list (fileTopic = fileTopic.cs)
             List<weapons> weaponItem = new List<weapons>();
             //ListCollectionView collection = new ListCollectionView(weaponItem);
@@ -66,7 +60,36 @@ namespace DRAFT_StanceView
                     stancepolarity = weaponElement[15],
                 });
                 weaponsListBox.Items.Add(weaponElement[0]);
+
+
             }
+        }
+
+        public void displayImages()
+        {
+            string selectedStancePolarity = null; //STANCE POLARITY NAME NEEDS TO GO HERE//
+            string selectedWeaponPolarity = null; //STANCE POLARITY NAME NEEDS TO GO HERE//
+            string imageName = null;
+
+            string stancePols = selectedStancePolarity;
+            //string wpnPol = selectedWeaponPolarity;
+            string wpnPol = "Naramon Pol; Mad; ";
+
+            if (wpnPol.Contains(";"))
+            {
+                wpnPol.Trim();
+                string[] split = wpnPol.Split(new char[] { ';' });
+                string wpnPol1 = split[0].Trim();
+                string wpnPol2 = split[1].Trim();
+            }
+
+
+
+            //stancePolImg.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + imageName + ".png"));
+            //wpnPol1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + imageName + ".png"));
+            //wpnPol2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + imageName + ".png"));
+
+
         }
 
         private void weaponsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -74,6 +97,7 @@ namespace DRAFT_StanceView
             ListBox listBox = (ListBox)sender;
             string item = listBox.SelectedItem.ToString();
             int index = listBox.SelectedIndex;
+            
             /*weaponsListBox*/;
         }
     }
