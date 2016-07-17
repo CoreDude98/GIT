@@ -13,6 +13,11 @@ namespace DRAFT_StanceView
             get; set;
         }
 
+        public string type
+        {
+            get; set;
+        }
+
         public string weaponpolarity
         {
             get; set;
