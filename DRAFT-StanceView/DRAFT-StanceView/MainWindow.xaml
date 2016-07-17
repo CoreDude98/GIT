@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Warfame Weapon Tool" Height="360" Width="550">
     <Grid>
-        <Label x:Name="label" Content="Stance &amp; Polarity View" Margin="196,9,195,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold"/>
+        <Label x:Name="label" Content="Stance &amp; Polarity View" Margin="196,9,181,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold"/>
         <ListBox x:Name="weaponsListBox" HorizontalAlignment="Left" Margin="10,68,0,10.4" Width="148" Background="#FFF0F0F0" SelectionChanged="weaponsListBox_SelectionChanged"/>
         <Label x:Name="label1_Copy" Content="Stance Polarity" HorizontalAlignment="Left" Margin="181,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="0,5,5,5"/>
         <Label x:Name="label2" Content="Weapons" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>

@@ -70,7 +70,7 @@ namespace DRAFT_StanceView
 
         public void displayStancePolImages()
         {
-            string selectedStancePolarity = null; //STANCE POLARITY NAME NEEDS TO GO HERE//
+            string selectedStancePolarity = "Vazarin Pol"; //STANCE POLARITY NAME NEEDS TO GO HERE//
 
             if (selectedStancePolarity != null)
             {
@@ -163,7 +163,7 @@ namespace DRAFT_StanceView
 
         public void displayStanceImages()
         {
-            string selectedWeaponType = "Daggers";
+            string selectedWeaponType = "Whips";
             string wpnType = selectedWeaponType.Trim().Replace(" ", "_");
             string stance1FileName = null;
             string stance2FileName = null;
