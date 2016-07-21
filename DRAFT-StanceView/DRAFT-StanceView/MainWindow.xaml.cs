@@ -24,18 +24,16 @@ namespace DRAFT_StanceView
         public MainWindow()
         {
             InitializeComponent();
-            displayGrid();
-            displayStancePolImages();
-            displayWpnPolImages();
-            displayStanceImages();
-            
-
-
         }
 
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
-        
+        List<weapons> weaponItem = new List<weapons>();
+
+        string selectedStancePolarity = null;
+        string selectedWeaponPolarity = null;
+        string selectedWeaponType = null;
+
 
 
 
@@ -47,8 +45,7 @@ namespace DRAFT_StanceView
 
             string[] weaponElement = new string[2];
             //Create new list (fileTopic = fileTopic.cs)
-            List<weapons> weaponItem = new List<weapons>();
-            //ListCollectionView collection = new ListCollectionView(weaponItem);
+            
             //split csv into arrays
             for (int i = 0; i < meleeWeapons.Length; i++)
             {
@@ -70,10 +67,12 @@ namespace DRAFT_StanceView
 
         public void displayStancePolImages()
         {
-            string selectedStancePolarity = "Vazarin Pol"; //STANCE POLARITY NAME NEEDS TO GO HERE//
-
-            if (selectedStancePolarity != null)
+            if (selectedStancePolarity != "" && selectedStancePolarity != null)
             {
+                Thickness m = stancePolLbl.Margin;
+                m.Left = 215;
+                stancePolLbl.Margin = m;
+
                 stancePolLbl.Content = selectedStancePolarity;
                 string stancePol = selectedStancePolarity.Trim().Replace(" ", "_");
                 stancePolImg.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + stancePol + ".png"));
@@ -83,20 +82,15 @@ namespace DRAFT_StanceView
                 Thickness m = stancePolLbl.Margin;
                 m.Left = 176;
                 stancePolLbl.Margin = m;
+                stancePolImg.Source = null;
                 stancePolLbl.Content = "No Stance Polarity";
             }
-
-
-
-
         }
 
         public void displayWpnPolImages()
         {
-            string selectedWeaponPolarity = null; //STANCE POLARITY NAME NEEDS TO GO HERE//
-            if (selectedWeaponPolarity != null)
+            if (selectedWeaponPolarity != "")
             {
-                //string wpnPols = "Naramon Pol; Naramon Pol".Trim();
                 string wpnPols = selectedWeaponPolarity;
                 string wpnPol1 = null;
                 string wpnPol2 = null;
@@ -135,11 +129,14 @@ namespace DRAFT_StanceView
                     x1.Content = "x";
                     wpnPol1Lbl.Content = selectedWeaponPolarity;
                     wpnPol1FileName = selectedWeaponPolarity.Trim().Replace(" ", "_");
-                    
+                    wpnPol2Img.Source = null;
+                    x2.Content = null;
+                    wpnPol2Lbl.Content = null;
+                    wpnPol2MultiplierLbl.Content = null;
+
                 }
 
-
-
+                
                 wpnPol1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + wpnPol1FileName + ".png"));
 
                 if (wpnPol2 != null && wpnPol1 != wpnPol2)
@@ -147,6 +144,10 @@ namespace DRAFT_StanceView
                     wpnPol2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\" + wpnPol2FileName + ".png"));
 
                 }
+
+                Thickness m = wpnPol1Lbl.Margin;
+                m.Left = 354;
+                wpnPol1Lbl.Margin = m;
             }
             else
             {
@@ -154,6 +155,13 @@ namespace DRAFT_StanceView
                 m.Left = 294;
                 wpnPol1Lbl.Margin = m;
                 wpnPol1Lbl.Content = "No Weapon Polarity";
+                wpnPol1Img.Source = null;
+                wpnPol2Img.Source = null;
+                x1.Content = null;
+                x2.Content = null;
+                wpnPol2Lbl.Content = null;
+                wpnPol1MultiplierLbl.Content = null;
+                wpnPol2MultiplierLbl.Content = null;
             }
             //string wpnPols = selectedWeaponPolarity.Trim();
             
@@ -163,8 +171,10 @@ namespace DRAFT_StanceView
 
         public void displayStanceImages()
         {
-            string selectedWeaponType = "Whips";
             string wpnType = selectedWeaponType.Trim().Replace(" ", "_");
+            wpnTypeStance1Img.Source = null;
+            wpnTypeStance2Img.Source = null;
+            wpnTypeStance3Img.Source = null;
             string stance1FileName = null;
             string stance2FileName = null;
             string stance3FileName = null;
@@ -193,7 +203,7 @@ namespace DRAFT_StanceView
                 stance1FileName = "CrossingSnakes";
                 stance2FileName = "SwirlingTiger";
             }
-            if (wpnType == "Fist")
+            if (wpnType == "Fists")
             {
                 stance1FileName = "FracturingWind";
                 stance2FileName = "GaiasTragedy";
@@ -239,9 +249,9 @@ namespace DRAFT_StanceView
                 stance1FileName = "BleedingWillow";
                 stance2FileName = "ShimmeringBlight";
             }
-            if (wpnType == "Rapier")
+            if (wpnType == "Rapiers")
             {
-                stance1FileName = "VlupineMask";
+                stance1FileName = "VulpineMask";
             }
             if (wpnType == "Scythes")
             {
@@ -264,7 +274,7 @@ namespace DRAFT_StanceView
                 stance2FileName = "IronPhoenix";
                 stance3FileName = "VengefulRevenant";
             }
-            if (wpnType == "Swords_and_Shield")
+            if (wpnType == "Sword_and_Shield")
             {
                 stance1FileName = "EleventhStorm";
                 stance2FileName = "Harbinger";
@@ -299,8 +309,25 @@ namespace DRAFT_StanceView
             ListBox listBox = (ListBox)sender;
             string item = listBox.SelectedItem.ToString();
             int index = listBox.SelectedIndex;
-            
-            /*weaponsListBox*/;
+
+            selectedStancePolarity = weaponItem[index].stancepolarity;
+            selectedWeaponPolarity = weaponItem[index].weaponpolarity;
+            selectedWeaponType = weaponItem[index].type;
+
+            displayStancePolImages();
+            displayWpnPolImages();
+            displayStanceImages();
+
+            /*weaponsListBox*/
+            ;
+        }
+
+        private void weaponsListBoxLoaded(object sender, RoutedEventArgs e)
+        {
+            ListBox listBox = (ListBox)sender;
+            listBox.SelectedIndex = 0;
+            displayGrid();
+
         }
     }
 }
