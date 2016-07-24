@@ -77,6 +77,21 @@ namespace DRAFT_WeaponsMethod
             }
 
 
+            
+
+            DataGridTemplateColumn addInfoCol = new DataGridTemplateColumn();
+            addInfoCol.Header = "Additional Information";
+            addInfoCol.DisplayIndex = 17;
+            
+
+            
+
+            FrameworkElementFactory but = new FrameworkElementFactory(typeof(Button));
+            but.SetValue(Button.CommandProperty, new Binding("addInfo"));
+
+            wpMeleeDataGridOutput.Columns.Add(addInfoCol);
+
+            //addInfoCol.CellTemplate.Template(but);
 
             //datagrid grabs the list
             //wpMeleeDataGridOutput.ItemsSource = weaponItem;
@@ -107,21 +122,31 @@ namespace DRAFT_WeaponsMethod
             TextBox t = (TextBox)sender;
             string searchValue = wpSearchTextInput.Text;
             ICollectionView cv = CollectionViewSource.GetDefaultView(wpMeleeDataGridOutput.ItemsSource);
+            cv.Filter = UserFilter;
 
-            if (!string.IsNullOrEmpty(searchValue))
-            {
-                cv.Filter = o =>
-                {
-                    /* change to get data row value */
-                    weapons p = o as weapons;
-                    return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
-                    /* end change to get data row value */
-                };
-            }
+
+            //if (!string.IsNullOrEmpty(searchValue))
+            //{
+            //    cv.Filter = o =>
+            //    {
+            //        /* change to get data row value */
+            //        weapons p = o as weapons;
+            //        return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
+            //        /* end change to get data row value */
+            //    };
+            //}
+            //else
+            //{
+
+            //}
+        }
+
+        private bool UserFilter(object item)
+        {
+            if (String.IsNullOrEmpty(wpSearchTextInput.Text))
+                return true;
             else
-            {
-
-            }
+                return ((item as weapons).name.ToUpper().StartsWith(wpSearchTextInput.Text.ToUpper()));
         }
 
 
