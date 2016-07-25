@@ -77,19 +77,51 @@ namespace DRAFT_WeaponsMethod
             }
 
 
-            
 
-            DataGridTemplateColumn addInfoCol = new DataGridTemplateColumn();
-            addInfoCol.Header = "Additional Information";
-            addInfoCol.DisplayIndex = 17;
-            
 
-            
+            //DataGridTemplateColumn addInfoCol = new DataGridTemplateColumn();
+
+            //addInfoCol.Header = "Additional Information";
+            //addInfoCol.DisplayIndex = 17;
+
+
+
+
+
 
             FrameworkElementFactory but = new FrameworkElementFactory(typeof(Button));
-            but.SetValue(Button.CommandProperty, new Binding("addInfo"));
 
-            wpMeleeDataGridOutput.Columns.Add(addInfoCol);
+            
+
+            but.AddHandler(Button.ClickEvent, new RoutedEventHandler((o, e) => 
+            {
+                int dgIndex = wpMeleeDataGridOutput.SelectedIndex;
+                string additionInfo = weaponItem[dgIndex].addinfo;
+
+                MessageBox.Show(additionInfo);
+
+            }
+            ));
+
+
+
+            //wpMeleeDataGridOutput.Columns.Remove("addinfo");
+
+
+
+            wpMeleeDataGridOutput.Columns.Add(
+                new DataGridTemplateColumn()
+                {
+                    Header = "Additional Information",
+                    CellTemplate = new DataTemplate() { VisualTree = but },
+                    DisplayIndex = 17
+                    
+                }
+            );
+
+            
+
+
 
             //addInfoCol.CellTemplate.Template(but);
 
