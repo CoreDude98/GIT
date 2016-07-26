@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.ComponentModel;
+using DRAFT_WeaponsMethod;
 
 namespace DRAFT_WeaponsMethod
 {
@@ -176,5 +177,19 @@ namespace DRAFT_WeaponsMethod
             wpMeleeDataGridOutput.Columns[17].Visibility = Visibility.Collapsed;
             //wpMeleeDataGridOutput.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Auto);
         }
+
+        //public void dataGridHideColumns()
+        //{
+        //    for (int i = 0; i < 16; i++)
+        //    {
+                
+        //        if (checkBox[i].IsChecked)
+        //        {
+
+        //            wpMeleeDataGridOutput.Columns[i].Visibility = Visibility.Collapsed;
+        //        }
+                
+        //    }
+        //}
     }
 }

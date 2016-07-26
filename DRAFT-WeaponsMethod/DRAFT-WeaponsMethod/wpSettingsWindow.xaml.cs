@@ -22,6 +22,10 @@ namespace DRAFT_WeaponsMethod
         public wpSettingsWindow()
         {
             InitializeComponent();
+             
         }
+
+        
+
     }
 }
