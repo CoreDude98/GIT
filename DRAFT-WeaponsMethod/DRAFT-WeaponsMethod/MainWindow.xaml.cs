@@ -27,7 +27,7 @@ namespace DRAFT_WeaponsMethod
             InitializeComponent();
             displayGrid();
             List<weapons> weaponItem;
-            
+            wpMeleeDataGridOutput.Loaded += SetMinWidths;
 
         }
 
@@ -36,7 +36,14 @@ namespace DRAFT_WeaponsMethod
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
 
-
+        public void SetMinWidths(object source, EventArgs e)
+        {
+            foreach (var column in wpMeleeDataGridOutput.Columns)
+            {
+                column.MinWidth = column.ActualWidth;
+                column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+            }
+        }
 
         private void displayGrid()
         {
@@ -77,7 +84,7 @@ namespace DRAFT_WeaponsMethod
             }
 
 
-
+           
 
             //DataGridTemplateColumn addInfoCol = new DataGridTemplateColumn();
 
@@ -100,14 +107,7 @@ namespace DRAFT_WeaponsMethod
 
                 MessageBox.Show(additionInfo);
 
-            }
-            ));
-
-
-
-            //wpMeleeDataGridOutput.Columns.Remove("addinfo");
-
-
+            }));
 
             wpMeleeDataGridOutput.Columns.Add(
                 new DataGridTemplateColumn()
@@ -119,34 +119,10 @@ namespace DRAFT_WeaponsMethod
                 }
             );
 
+
             
 
-
-
-            //addInfoCol.CellTemplate.Template(but);
-
-            //datagrid grabs the list
-            //wpMeleeDataGridOutput.ItemsSource = weaponItem;
-
-            //if (cvWeapons != null)
-            //{
-            //    wpMeleeDataGridOutput.AutoGenerateColumns = true;
-            //    wpMeleeDataGridOutput.ItemsSource = cvWeapons;
-            //    cvWeapons.Filter = TextFilter;
-            //}
         }
-
-        //public bool TextFilter(object o)
-        //{
-        //    weapons p = (o as weapons);
-        //    if (p == null)
-        //        return false;
-
-        //    if (p.name.Contains(wpSearchTextInput.Text))
-        //        return true;
-        //    else
-        //        return false;
-        //}
 
 
         private void wpSearchTextInput_TextChanged(object sender, TextChangedEventArgs e)
@@ -155,26 +131,14 @@ namespace DRAFT_WeaponsMethod
             string searchValue = wpSearchTextInput.Text;
             ICollectionView cv = CollectionViewSource.GetDefaultView(wpMeleeDataGridOutput.ItemsSource);
             cv.Filter = UserFilter;
+            
+            
 
-
-            //if (!string.IsNullOrEmpty(searchValue))
-            //{
-            //    cv.Filter = o =>
-            //    {
-            //        /* change to get data row value */
-            //        weapons p = o as weapons;
-            //        return (p.name.ToUpper().StartsWith(searchValue.ToUpper()));
-            //        /* end change to get data row value */
-            //    };
-            //}
-            //else
-            //{
-
-            //}
         }
 
         private bool UserFilter(object item)
         {
+            
             if (String.IsNullOrEmpty(wpSearchTextInput.Text))
                 return true;
             else
@@ -182,27 +146,35 @@ namespace DRAFT_WeaponsMethod
         }
 
 
-        //cv.Filter = o =>
-        //{
-        //    weapons p = o as weapons;
-        //    if (t.Name == null)
-        //        return false;
-
-        //    if (t.Name.Contains(wpSearchTextInput.Text))
-        //        return true;
-        //    else
-        //        return false;
-        //};
-
-
-
-
-
         private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
         {
             
             win1.Show();
 
+        }
+
+        private void wpMeleeDataGridOutputLoaded(object sender, RoutedEventArgs e)
+        {
+            wpMeleeDataGridOutput.Columns[0].Header = "Extra Info";
+            wpMeleeDataGridOutput.Columns[1].Header = "Weapon";
+            wpMeleeDataGridOutput.Columns[2].Header = "Type";
+            wpMeleeDataGridOutput.Columns[3].Header = "Element";
+            wpMeleeDataGridOutput.Columns[4].Header = "Dmg";
+            wpMeleeDataGridOutput.Columns[5].Header = "Impact";
+            wpMeleeDataGridOutput.Columns[6].Header = "Punct";
+            wpMeleeDataGridOutput.Columns[7].Header = "Slash";
+            wpMeleeDataGridOutput.Columns[8].Header = "Slide";
+            wpMeleeDataGridOutput.Columns[9].Header = "Jump";
+            wpMeleeDataGridOutput.Columns[10].Header = "Wall";
+            wpMeleeDataGridOutput.Columns[11].Header = "Crit%";
+            wpMeleeDataGridOutput.Columns[12].Header = "CritX";
+            wpMeleeDataGridOutput.Columns[13].Header = "Proc%";
+            wpMeleeDataGridOutput.Columns[14].Header = "Unlock";
+            wpMeleeDataGridOutput.Columns[15].Header = "Weapon Pols";
+            wpMeleeDataGridOutput.Columns[16].Header = "Stance Pols";
+            //wpMeleeDataGridOutput.ColumnWidth. = true;
+            wpMeleeDataGridOutput.Columns[17].Visibility = Visibility.Collapsed;
+            //wpMeleeDataGridOutput.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Auto);
         }
     }
 }
