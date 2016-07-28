@@ -16,6 +16,7 @@ using System.IO;
 using System.ComponentModel;
 using DRAFT_WeaponsMethod;
 
+
 namespace DRAFT_WeaponsMethod
 {
     /// <summary>
@@ -29,11 +30,12 @@ namespace DRAFT_WeaponsMethod
             displayGrid();
             List<weapons> weaponItem;
             wpMeleeDataGridOutput.Loaded += SetMinWidths;
+            
+
 
         }
 
-
-        wpSettingsWindow win1 = new wpSettingsWindow();
+        
         string currentFile = Environment.CurrentDirectory + "\\meleeData.csv";
         string[] meleeWeapons = new string[16];
 
@@ -149,13 +151,14 @@ namespace DRAFT_WeaponsMethod
 
         private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            win1.Show();
+            wpSettingsWindow settingswin = new wpSettingsWindow();
+            settingswin.Show();
 
         }
 
         private void wpMeleeDataGridOutputLoaded(object sender, RoutedEventArgs e)
         {
+            wpMeleeDataGridOutput.Columns[17].Visibility = Visibility.Collapsed;
             wpMeleeDataGridOutput.Columns[0].Header = "Extra Info";
             wpMeleeDataGridOutput.Columns[1].Header = "Weapon";
             wpMeleeDataGridOutput.Columns[2].Header = "Type";
@@ -174,22 +177,29 @@ namespace DRAFT_WeaponsMethod
             wpMeleeDataGridOutput.Columns[15].Header = "Weapon Pols";
             wpMeleeDataGridOutput.Columns[16].Header = "Stance Pols";
             //wpMeleeDataGridOutput.ColumnWidth. = true;
-            wpMeleeDataGridOutput.Columns[17].Visibility = Visibility.Collapsed;
+
             //wpMeleeDataGridOutput.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Auto);
         }
 
-        //public void dataGridHideColumns()
-        //{
-        //    for (int i = 0; i < 16; i++)
-        //    {
-                
-        //        if (checkBox[i].IsChecked)
-        //        {
+        public void dataGridHideColumns(string[] viewArray, object sender)
+        {         
+            string[] prevColumnChecked = new string[17];
+            prevColumnChecked = viewArray;
 
-        //            wpMeleeDataGridOutput.Columns[i].Visibility = Visibility.Collapsed;
-        //        }
-                
-        //    }
-        //}
+            DataGrid datagrid = (DataGrid)sender;
+
+            for (int i = 0; i < 17; i++)
+            {
+                if (viewArray[i] == "False")
+                {
+                    
+                    datagrid.Columns[i].Visibility = Visibility.Collapsed;
+                }
+                if (viewArray[i] == "True")
+                {
+                    datagrid.Columns[i].Visibility = Visibility.Visible;
+                }
+            }
+        }
     }
 }

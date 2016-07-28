@@ -39,6 +39,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>1</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,6 +74,7 @@
     <Compile Include="diffAttempt.xaml.cs">
       <DependentUpon>diffAttempt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="sharedMethodVars.cs" />
     <Compile Include="weapons.cs" />
     <Compile Include="wpSettingsWindow.xaml.cs">
       <DependentUpon>wpSettingsWindow.xaml</DependentUpon>
