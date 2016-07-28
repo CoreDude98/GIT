@@ -17,7 +17,7 @@ using WarframeWeaponTool.Classes;
 namespace WarframeWeaponTool.Pages
 {
     /// <summary>
-    /// Interaction logic for weapons.xaml
+    /// Interaction logic for inventory.xaml
     /// </summary>
     public partial class inventory : UserControl, ISwitchable
     {

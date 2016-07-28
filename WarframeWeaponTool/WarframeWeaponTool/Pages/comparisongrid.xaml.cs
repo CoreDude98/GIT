@@ -17,7 +17,7 @@ using WarframeWeaponTool.Classes;
 namespace WarframeWeaponTool.Pages
 {
     /// <summary>
-    /// Interaction logic for weapons.xaml
+    /// Interaction logic for comparisongrid.xaml
     /// </summary>
     public partial class comparisongrid : UserControl, ISwitchable
     {
