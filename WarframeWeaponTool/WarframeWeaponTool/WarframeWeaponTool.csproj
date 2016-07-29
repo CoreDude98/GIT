@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -132,9 +133,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\meleeData.csv">
+    <Content Include="Data\meleeData.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,7 +145,150 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Polarities\Madurai_Pol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polarities\Naramon_Pol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polarities\Unairu_Pol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polarities\Vazarin_Pol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polarities\Zenurik_Pol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Melee_Stances\Blade_and_Whip\DefiledSnapdragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Claws\FourRiders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Claws\MaliciousRaptor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Claws\VermillionStorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Daggers\HomingFang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Daggers\PointedWind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Dual_Daggers\GnashingPayara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Dual_Daggers\SinkingTalon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Dual_Swords\CrossingSnakes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Dual_Swords\SwirlingTiger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Fists\FracturingWind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Fists\GaiasTragedy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Fists\SeismicPalm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Glaives\AstralTwilight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Glaives\GleamingTalon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Gunblade\HighNoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Hammers\CrushingRuin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Hammers\ShatteringStorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Heavy_Blade\CleavingWhirlwind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Heavy_Blade\RendingCrane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Heavy_Blade\TempoRoyale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Machetes\SunderingWeave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Nikanas\BlindJustice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Nikanas\DecisiveJudgement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Nikanas\TranquilCleave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Nunchaku\AtlantisVulcan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Polearms\BleedingWillow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Polearms\ShimmeringBlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Rapiers\VulpineMask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Scythes\ReapingSpiral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Scythes\StalkingFan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Sparring\BrutalTide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Sparring\GrimFury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Staves\ClashingForest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Staves\FlailingBranch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Sword_and_Shield\EleventhStorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Sword_and_Shield\Harbinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Swords\CrimsonDervish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Swords\IronPhoenix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Swords\VengefulRevenant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Tonfas\GeminiCross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Whips\BurningWasp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melee_Stances\Whips\CoilingViper.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

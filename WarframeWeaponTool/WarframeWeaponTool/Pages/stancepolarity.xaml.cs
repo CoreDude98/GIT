@@ -71,7 +71,7 @@ namespace WarframeWeaponTool.Pages
         {
             //Read CSV file
             //FIX THIS//
-            meleeWeapons = File.ReadAllLines(@"meleeData");
+            meleeWeapons = File.ReadAllLines(@"Data/meleeData.csv");
 
             //create Array for attributes
             string[] weaponElement = new string[0];
@@ -111,7 +111,9 @@ namespace WarframeWeaponTool.Pages
 
                 stancePolLbl.Content = selectedStancePolarity;
                 string stancePol = selectedStancePolarity.Trim().Replace(" ", "_");
-                stancePolImg.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Polarities\\" + stancePol + ".png"));
+                stancePolImg.Source = new BitmapImage(new Uri("pack://application:,,," + "//Resources//Polarities//" + stancePol + ".png"));
+                //new Uri("pack://application:,,,//Resources//Melee_Stances//Blade_and_Whip//DefiledSnapdragon.png"));
+                //new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Polarities\\" + stancePol + ".png"));
             }
             //Else say 'no stance polarity', set margin to align with title, delete any previous images
             else

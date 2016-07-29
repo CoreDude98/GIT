@@ -7,19 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="330" d:DesignWidth="544">
     <Grid Background="White">
-        <DataGrid x:Name="meleeDataGridOutput" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="277" Width="524" />
+        <DataGrid x:Name="meleeDataGridOutput" AutoGenerateColumns="True" HorizontalAlignment="Left"  Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522" CanUserAddRows="false" FrozenColumnCount="1" Focusable="False" IsReadOnly="True" Loaded="meleeDataGridOutputLoaded"/>
         <ComboBox x:Name="menuSelect" Margin="389,10,0,0" VerticalAlignment="Top" Loaded="menuSelectLoaded" SelectionChanged="menuSelectSelectionChanged" HorizontalAlignment="Left" Width="145"/>
-        <Button x:Name="optionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0"/>
-        <Label x:Name="viewTitle" Content="Weapon View" Margin="224,10,202,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF020202" FontSize="13.333" Height="26"/>
+        <Button x:Name="wpOptionsBtn" Content="Options" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="52" Background="#FFF0F0F0"/>
+        <Label x:Name="titleLbl" Content="Weapon View" Margin="224,10,202,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF020202" FontSize="13.333" Height="26"/>
         <Button x:Name="filterBtn" Content="Filter" HorizontalAlignment="Left" Margin="166,13,0,0" VerticalAlignment="Top" Width="50" Background="#FFF0F0F0"/>
-        <TextBox x:Name="searchTextInput" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
-        <Rectangle Fill="Black" Margin="0,122,0,122" Stroke="Black" HorizontalAlignment="Left" Width="10"/>
-        <Rectangle Fill="Black" Margin="0,244,0,-0.4" Stroke="Black" HorizontalAlignment="Right" Width="10"/>
-        <Rectangle Fill="Black" Height="10" Margin="0,0,237,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="72"/>
-        <Rectangle Fill="Black" Height="10" Margin="235,320,235,0" Stroke="Black" VerticalAlignment="Top"/>
-        <Rectangle Fill="Black" Margin="0,0,0,243.6" Stroke="Black" HorizontalAlignment="Right" Width="10"/>
-        <Rectangle Fill="Black" Height="10" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="72" Margin="0,320,0,-0.4"/>
-        <Rectangle Fill="Black" Height="10" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="72"/>
+        <TextBox x:Name="searchTextInput" TextChanged="searchTextInput_TextChanged" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
 
     </Grid>
 </UserControl>
