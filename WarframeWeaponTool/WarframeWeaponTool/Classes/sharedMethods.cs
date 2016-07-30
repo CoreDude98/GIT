@@ -10,6 +10,11 @@ namespace WarframeWeaponTool.Classes
 {
     public static class sharedMethods
     {
+        public static void WIP()
+        {
+            MessageBox.Show("This feature is currently in development.", "Work in Progress",MessageBoxButton.OK,MessageBoxImage.Exclamation);
+        }
+
         public static void messageBox(string text)
         {
             MessageBox.Show(text);

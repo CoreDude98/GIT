@@ -26,25 +26,24 @@ namespace WarframeWeaponTool.Pages
         public weapons()
         {
             InitializeComponent();
-
+            //display menu grid
             displayGrid();
-            //List<weaponData> weaponItem;
-
         }
+        //index for menu
         int screenIndex = 0;
 
+        //User control code
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
-
+        //loads menu and respective code to change menu item
         private void menuSelectLoaded(object sender, RoutedEventArgs e)
         {
             var menu = sender as ComboBox;
             menu.SelectedIndex = screenIndex;
             menu.ItemsSource = sharedMethods.createMenu(sender);
         }
-
         private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var menu = sender as ComboBox;
@@ -53,30 +52,24 @@ namespace WarframeWeaponTool.Pages
             sharedMethods.MenuSelect(sender, selectedIndex, currentIndex);
         }
 
-        string[] meleeWeapons = new string[16];
+        //GlobalVars
+        string[] meleeWeapons = new string[0];
 
-        public void SetMinWidths(object source, EventArgs e)
-        {
-            foreach (var column in meleeDataGridOutput.Columns)
-            {
-                column.MinWidth = column.ActualWidth;
-                column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
-            }
-        }
-
+        //display grid method
         private void displayGrid()
         {
-            meleeWeapons = File.ReadAllLines(Environment.CurrentDirectory + "//Data//meleeData.csv");
-            //display contents of array in datagrid
-
+            //Puts line into meleeWeapons array
+            meleeWeapons = File.ReadAllLines(@"Data/meleeData.csv");
+            //create array for each attribute of each weapon.
             string[] weaponElement = new string[16];
-            //Create new list (fileTopic = fileTopic.cs)
+            //Create new list
             List<weaponData> weaponItem = new List<weaponData>();
-            
+            //set dataGrid source
             meleeDataGridOutput.ItemsSource = weaponItem;
             //split csv into arrays
             for (int i = 0; i < meleeWeapons.Length; i++)
             {
+                //Split csv s into array
                 weaponElement = meleeWeapons[i].Split(',');
                 //Add array elements to list
                 weaponItem.Add(new weaponData()
@@ -102,23 +95,33 @@ namespace WarframeWeaponTool.Pages
                 });
             }
 
+            //Create button element.
             FrameworkElementFactory but = new FrameworkElementFactory(typeof(Button));
-
-
-
+            
+            //Add handler for button click
             but.AddHandler(Button.ClickEvent, new RoutedEventHandler((o, e) =>
             {
+                //grab index of button
                 int dgIndex = meleeDataGridOutput.SelectedIndex;
+                //grab additional info from weaponItem List.
                 string additionInfo = weaponItem[dgIndex].addinfo;
-
-                MessageBox.Show(additionInfo);
+                //if there is no additional info:
+                if (String.IsNullOrEmpty(additionInfo))
+                {
+                    //Show message then break
+                    MessageBox.Show("There is no additional information to be displayed about this weapon.","No Additional Weapon Information",MessageBoxButton.OK);
+                    return;
+                }
+                //Else show additional info
+                MessageBox.Show(additionInfo,"Additional Information",MessageBoxButton.OK);
 
             }));
 
+            //Add button column to dataGrid.
             meleeDataGridOutput.Columns.Add(
                 new DataGridTemplateColumn()
                 {
-                    Header = "Additional Information",
+                    //Set celltemplate and viewing index.
                     CellTemplate = new DataTemplate() { VisualTree = but },
                     DisplayIndex = 17
 
@@ -133,45 +136,40 @@ namespace WarframeWeaponTool.Pages
 
         private void searchTextInput_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //grab textbox
             TextBox t = (TextBox)sender;
+            //grab text from searchbox
             string searchValue = searchTextInput.Text;
+            //create ICollectionView for filter and activate filtering method.
             ICollectionView cv = CollectionViewSource.GetDefaultView(meleeDataGridOutput.ItemsSource);
-            //if (searchValue == "Search")
-            //{
-            //    return;
-            //}
             cv.Filter = UserFilter;
         }
 
         private bool UserFilter(object item)
         {
-
+            //if string is null/empty, activate no filter.
             if (String.IsNullOrEmpty(searchTextInput.Text))
                 return true;
+            //else apply filter.
             else
                 return ((item as weaponData).name.ToUpper().StartsWith(searchTextInput.Text.ToUpper()));
         }
 
 
-        private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            //wpOptionsBtn settingswin = new wpOptionsBtn();
-            //settingswin.Show();
-
-        }
+        
 
         private void meleeDataGridOutputLoaded(object sender, RoutedEventArgs e)
         {
-            
-            
+            //Hide autogenerated column for additional information.
             meleeDataGridOutput.Columns[17].Visibility = Visibility.Collapsed;
+            //Set custom Headers
             meleeDataGridOutput.Columns[0].Header = "Extra Info";
             meleeDataGridOutput.Columns[1].Header = "Weapon";
             meleeDataGridOutput.Columns[2].Header = "Type";
             meleeDataGridOutput.Columns[3].Header = "Element";
-            meleeDataGridOutput.Columns[4].Header = "Dmg";
+            meleeDataGridOutput.Columns[4].Header = "Damage";
             meleeDataGridOutput.Columns[5].Header = "Impact";
-            meleeDataGridOutput.Columns[6].Header = "Punct";
+            meleeDataGridOutput.Columns[6].Header = "Puncture";
             meleeDataGridOutput.Columns[7].Header = "Slash";
             meleeDataGridOutput.Columns[8].Header = "Slide";
             meleeDataGridOutput.Columns[9].Header = "Jump";
@@ -182,34 +180,35 @@ namespace WarframeWeaponTool.Pages
             meleeDataGridOutput.Columns[14].Header = "Unlock";
             meleeDataGridOutput.Columns[15].Header = "Weapon Pols";
             meleeDataGridOutput.Columns[16].Header = "Stance Pols";
-
-            
-            
-            //meleeDataGridOutput.ColumnWidth. = true;
-
-            //meleeDataGridOutput.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Auto);
         }
 
-       
-        public void dataGridHideColumns(string[] viewArray, object sender)
+        //WIP PROGRESS (WIP method launched)
+            //public void dataGridHideColumns(string[] viewArray, object sender)
+            //{
+            //    string[] prevColumnChecked = new string[17];
+            //    prevColumnChecked = viewArray;
+            //    DataGrid datagrid = (DataGrid)sender;
+            //    for (int i = 0; i < 17; i++)
+            //    {
+            //        if (viewArray[i] == "False")
+            //        {
+            //            datagrid.Columns[i].Visibility = Visibility.Collapsed;
+            //        }
+            //        if (viewArray[i] == "True")
+            //        {
+            //            datagrid.Columns[i].Visibility = Visibility.Visible;
+            //        }
+            //    }
+            //}
+        private void wpOptionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            string[] prevColumnChecked = new string[17];
-            prevColumnChecked = viewArray;
-
-            DataGrid datagrid = (DataGrid)sender;
-
-            for (int i = 0; i < 17; i++)
-            {
-                if (viewArray[i] == "False")
-                {
-
-                    datagrid.Columns[i].Visibility = Visibility.Collapsed;
-                }
-                if (viewArray[i] == "True")
-                {
-                    datagrid.Columns[i].Visibility = Visibility.Visible;
-                }
-            }
+            //wpOptionsBtn settingswin = new wpOptionsBtn();
+            //settingswin.Show();
+            sharedMethods.WIP();
+        }
+        private void filterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            sharedMethods.WIP();
         }
     }
 

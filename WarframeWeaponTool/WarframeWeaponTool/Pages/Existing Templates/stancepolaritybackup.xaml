@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WarframeWeaponTool.Pages.stancepolarity"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WarframeWeaponTool.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="330" d:DesignWidth="544">
+    <Grid Background="White">
+        <Label x:Name="titleLbl" Content="Stance &amp; Polarity View" Margin="196,9,181,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold"/>
+        <ListBox x:Name="weaponsListBox" HorizontalAlignment="Left" Margin="10,68,0,10.4" Width="148" Background="#FFF0F0F0" SelectionChanged="weaponsListBox_SelectionChanged" Loaded="weaponsListBoxLoaded"/>
+        <Label x:Name="stanceLbl" Content="Stance Polarity" HorizontalAlignment="Left" Margin="181,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="0,5,5,5"/>
+        <Label x:Name="weaponsLbl" Content="Weapons" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="availableLbl" Content="Avaliable Stances" HorizontalAlignment="Left" Margin="181,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <ComboBox x:Name="menuSelect" Loaded="menuSelectLoaded"  HorizontalAlignment="Left" Margin="412,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="wpnTypeStance3Img" HorizontalAlignment="Left" Height="169" Margin="417,151,0,0" VerticalAlignment="Top" Width="108"/>
+        <Image x:Name="wpnTypeStance1Img" HorizontalAlignment="Left" Height="169" Margin="181,151,0,0" VerticalAlignment="Top" Width="108"/>
+        <Image x:Name="wpnTypeStance2Img"  HorizontalAlignment="Left" Height="169" Margin="299,151,0,0"  VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="stancePolLbl" Content="" HorizontalAlignment="Left" Margin="215,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Label x:Name="weaponLbl" Content="Weapon Polarities" HorizontalAlignment="Left" Margin="299,42,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="wpnPol1Lbl" Content="" HorizontalAlignment="Left" Margin="354,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Label x:Name="wpnPol1MultiplierLbl" Content="" HorizontalAlignment="Left" Margin="296,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Label x:Name="x1" Content="" HorizontalAlignment="Left" Margin="309,76,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label x:Name="wpnPol2Lbl" Content="" HorizontalAlignment="Left" Margin="474,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Label x:Name="wpnPol2MultiplierLbl" Content="" HorizontalAlignment="Left" Margin="416,76,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Label x:Name="x2" Content="" HorizontalAlignment="Left" Margin="429,76,0,0" VerticalAlignment="Top" Height="25"/>
+        <Image x:Name="stancePolImg" HorizontalAlignment="Left" Height="29" Margin="181,76,0,0" VerticalAlignment="Top" Width="29"/>
+        <Image x:Name="wpnPol1Img" HorizontalAlignment="Left" Height="29" Margin="325,74,0,0" VerticalAlignment="Top" Width="29"/>
+        <Image x:Name="wpnPol2Img" HorizontalAlignment="Left" Height="29" Margin="445,74,0,0" VerticalAlignment="Top" Width="29"/>
+    </Grid>
+</UserControl>

@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.ComponentModel;
-using DRAFT_WeaponsMethod;
 
 
 namespace DRAFT_WeaponsMethod
@@ -27,8 +26,7 @@ namespace DRAFT_WeaponsMethod
         public MainWindow()
         {
             InitializeComponent();
-            displayGrid();
-            List<weapons> weaponItem;
+            displayGrid();            
             wpMeleeDataGridOutput.Loaded += SetMinWidths;
             
 

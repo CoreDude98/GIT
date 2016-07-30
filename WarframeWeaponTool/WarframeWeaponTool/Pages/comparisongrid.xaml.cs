@@ -24,21 +24,23 @@ namespace WarframeWeaponTool.Pages
         public comparisongrid()
         {
             InitializeComponent();
+            //Show that this feature is in development.
+            sharedMethods.WIP();
         }
+        //set screen index
         int screenIndex = 1;
 
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
-
+        //loads menu and respective code to change menu item
         private void menuSelectLoaded(object sender, RoutedEventArgs e)
         {
             var menu = sender as ComboBox;
             menu.SelectedIndex = screenIndex;
             menu.ItemsSource = sharedMethods.createMenu(sender);
         }
-
         private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var menu = sender as ComboBox;

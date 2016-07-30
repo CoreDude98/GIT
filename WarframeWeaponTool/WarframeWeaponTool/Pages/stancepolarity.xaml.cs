@@ -26,20 +26,21 @@ namespace WarframeWeaponTool.Pages
         {
             InitializeComponent();
         }
+        //set screen index
         int screenIndex = 4;
 
+        //User control code
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
-
+        //loads menu and respective code to change menu item
         private void menuSelectLoaded(object sender, RoutedEventArgs e)
         {
             var menu = sender as ComboBox;
             menu.SelectedIndex = screenIndex;
             menu.ItemsSource = sharedMethods.createMenu(sender);
         }
-
         private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var menu = sender as ComboBox;
@@ -48,52 +49,39 @@ namespace WarframeWeaponTool.Pages
             sharedMethods.MenuSelect(sender, selectedIndex, currentIndex);
         }
 
-
-        //Set CSV file path
-        string currentFile = Environment.CurrentDirectory + "\\Data\\meleeData.csv";
-
         //create array template for file.Read
         string[] meleeWeapons = new string[0];
 
-        //Create new list (fileTopic = fileTopic.cs
+        //Create new list
         List<weaponData> weaponItem = new List<weaponData>();
 
-        //VARIABLES//
+        //GLOBAL VARIABLES//
         string selectedStancePolarity = null;
         string selectedWeaponPolarity = null;
         string selectedWeaponType = null;
-
-
 
 
         //Reads CSV and displays the ListBox contents
         public void displayListBox()
         {
             //Read CSV file
-            //FIX THIS//
             meleeWeapons = File.ReadAllLines(@"Data/meleeData.csv");
-
             //create Array for attributes
             string[] weaponElement = new string[0];
-
             //split csv into arrays
             for (int i = 0; i < meleeWeapons.Length; i++)
             {
                 //Split comma-seperated-values into weaponElement array.
                 weaponElement = meleeWeapons[i].Split(',');
-
                 //Add array elements to list
                 weaponItem.Add(new weaponData()
                 {
                     //get;set; weapon attributes
-
-                    
                     name = weaponElement[0],
                     type = weaponElement[1],
                     wpnpolarity = weaponElement[14],
                     stancepolarity = weaponElement[15],
                 });
-
                 //Adds name to list box                
                 weaponsListBox.Items.Add(weaponElement[0]);
             }
@@ -101,25 +89,34 @@ namespace WarframeWeaponTool.Pages
 
         public void displayStancePolImages()
         {
-            //If weapon has a stance polarity = 
-            if (selectedStancePolarity != "" && selectedStancePolarity != null)
+            //If weapon has a stance polarity 
+            if (!String.IsNullOrEmpty(selectedStancePolarity))
             {
                 //Set margin, find image file, set image source to image filename
                 Thickness m = stancePolLbl.Margin;
-                m.Left = 215;
+                m.Left = 223;
                 stancePolLbl.Margin = m;
 
                 stancePolLbl.Content = selectedStancePolarity;
                 string stancePol = selectedStancePolarity.Trim().Replace(" ", "_");
-                stancePolImg.Source = new BitmapImage(new Uri("pack://application:,,," + "//Resources//Polarities//" + stancePol + ".png"));
-                //new Uri("pack://application:,,,//Resources//Melee_Stances//Blade_and_Whip//DefiledSnapdragon.png"));
-                //new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Polarities\\" + stancePol + ".png"));
+                
+                //WIP
+                    //string stancePolPath2 = selectedStancePolarity.Trim().Replace(" ", "_") + ".png";
+                    //Uri u = new Uri(@"pack://application:,,,/" + stancePolPath2);
+                    //string stancePolPath = "pack://application:,,,//Resources//Polarities//" + stancePol + ".png";
+                    //stancePolImg.Source = new BitmapImage(u);
+                    //stancePolImg.Source = new BitmapImage(new Uri(@(("pack://application:,,,/Resources/Polarities/" + stancePol + ".png").ToString
+                    //stancePolImg.Source = new BitmapImage(new Uri(string.Format("pack://application:,,,/Resources/Polarities/{0}.png", stancePol)));
+                    //new Uri("pack://application:,,,//Resources//Melee_Stances//Blade_and_Whip//DefiledSnapdragon.png"));
+                //
+                //Set stance polarity image source.
+                stancePolImg.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + stancePol + ".png"));
             }
             //Else say 'no stance polarity', set margin to align with title, delete any previous images
             else
             {
                 Thickness m = stancePolLbl.Margin;
-                m.Left = 176;
+                m.Left = 189;
                 stancePolLbl.Margin = m;
                 stancePolImg.Source = null;
                 stancePolLbl.Content = "No Stance Polarity";
@@ -138,10 +135,10 @@ namespace WarframeWeaponTool.Pages
                 string wpnPol1FileName = null;
                 string wpnPol2FileName = null;
 
-                //If weapon polarity string contains ';'
+                //If weapon polarity string contains ';' (If 2 polarities this will be true, otherwise false)
                 if (wpnPols.Contains(";"))
                 {
-                    //split the phrase either side the ';'
+                    //split the phrase either side the ';', set filenames
                     string[] split = wpnPols.Split(new char[] { ';' });
                     wpnPol1 = split[0].Trim();
                     wpnPol2 = split[1].Trim();
@@ -162,7 +159,7 @@ namespace WarframeWeaponTool.Pages
                     //if weapon polarities are unique
                     else
                     {
-                        //show '1 x POLARITYA' and '1 x POLARITYB'.
+                        //show '1 x POLARITY A' and '1 x POLARITY B'.
                         wpnPol1MultiplierLbl.Content = "1";
                         x1.Content = "x";
                         wpnPol1Lbl.Content = wpnPol1;
@@ -188,19 +185,19 @@ namespace WarframeWeaponTool.Pages
                 }
 
                 //show 1st wepaon polarity image
-                wpnPol1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Polarities\\" + wpnPol1FileName + ".png"));
+                wpnPol1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + wpnPol1FileName + ".png"));
 
                 //If wpnPol2 exists and is unique
                 if (wpnPol2 != null && wpnPol1 != wpnPol2)
                 {
                     //show 2nd weapon polarity image
-                    wpnPol2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Polarities\\" + wpnPol2FileName + ".png"));
+                    wpnPol2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + wpnPol2FileName + ".png"));
 
                 }
 
                 //Set label margins
                 Thickness m = wpnPol1Lbl.Margin;
-                m.Left = 354;
+                m.Left = 370;
                 wpnPol1Lbl.Margin = m;
             }
             //If no weapon polarities
@@ -208,7 +205,7 @@ namespace WarframeWeaponTool.Pages
             {
                 //set label margin, clear all other labels/images
                 Thickness m = wpnPol1Lbl.Margin;
-                m.Left = 294;
+                m.Left = 315;
                 wpnPol1Lbl.Margin = m;
                 wpnPol1Lbl.Content = "No Weapon Polarity";
                 wpnPol1Img.Source = null;
@@ -353,16 +350,16 @@ namespace WarframeWeaponTool.Pages
             //If stances exist, display images
             if (stance1FileName != null)
             {
-                wpnTypeStance1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Melee_Stances\\" + wpnType + "\\" + stance1FileName + ".png"));
+                wpnTypeStance1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance1FileName + ".png"));
             }
             if (stance2FileName != null)
             {
-                wpnTypeStance2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Melee_Stances\\" + wpnType + "\\" + stance2FileName
+                wpnTypeStance2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance2FileName
                  + ".png"));
             }
             if (stance3FileName != null)
             {
-                wpnTypeStance3Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Melee_Stances\\" + wpnType + "\\" + stance3FileName + ".png"));
+                wpnTypeStance3Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance3FileName + ".png"));
             }
         }
 
@@ -387,6 +384,7 @@ namespace WarframeWeaponTool.Pages
         private void weaponsListBoxLoaded(object sender, RoutedEventArgs e)
         {
 
+            //Set index an launch displayListBox method.
             ListBox listBox = (ListBox)sender;
             listBox.SelectedIndex = 0;
             displayListBox();

@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WarframeWeaponTool.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="330" d:DesignWidth="544">
+             d:DesignHeight="360" d:DesignWidth="600">
     <Grid Background="White">
-        <ComboBox x:Name="menuSelect" HorizontalAlignment="Left" Margin="389,10,0,0" VerticalAlignment="Top" Width="143" Loaded="menuSelectLoaded" SelectionChanged="menuSelectSelectionChanged"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="276" Width="522"/>
-        <Label x:Name="label" Content="Inventory View" Margin="220,9,192,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13.333"/>
+        <ComboBox x:Name="menuSelect" Margin="422,10,10,0" VerticalAlignment="Top" Loaded="menuSelectLoaded" SelectionChanged="menuSelectSelectionChanged"/>
+        <DataGrid x:Name="dataGrid" Margin="10,43,10,10"/>
+        <Label x:Name="label" Content="Inventory View" Margin="249,9,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13.333" HorizontalAlignment="Left" Width="121"/>
         <Button x:Name="button" Content="Add/Delete" HorizontalAlignment="Left" Margin="109,13,0,0" VerticalAlignment="Top" Width="75" Background="#FFF0F0F0"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>   
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,12,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="94" FontFamily="Segoe UI Light"/>
     </Grid>
 </UserControl>

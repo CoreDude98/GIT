@@ -25,20 +25,20 @@ namespace WarframeWeaponTool.Pages
         {
             InitializeComponent();
         }
+        //set screen index
         int screenIndex = 5;
-
+        //User control code
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
-
+        //loads menu and respective code to change menu item
         private void menuSelectLoaded(object sender, RoutedEventArgs e)
         {
             var menu = sender as ComboBox;
             menu.SelectedIndex = screenIndex;
             menu.ItemsSource = sharedMethods.createMenu(sender);
         }
-
         private void menuSelectSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var menu = sender as ComboBox;

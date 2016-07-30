@@ -14,6 +14,8 @@ Cerata,Glaives,Toxin,35,0,0,0,175,35,105,0.15,2,0.15,3,Madurai Pol; Vazarin Pol,
 Cronus,Swords,,35,10.5,5.3,19.2,75,70,140,0.05,1.5,0.1,0,Madurai Pol,Madurai Pol,
 Dakra Prime,Swords,,60,6,6,48,129,120,240,0.15,1.5,0.1,6,Madurai Pol; Naramon Pol,Madurai Pol,
 Dark Daggers,Daggers,Radiation,35,0,0,0,75,70,105,0.05,1.5,0.1,0,,Unairu Pol,
+Dark Split-Sword (Dual),Dual Swords,Radiation,65,0,0,0,390,130,260,0.05,2,0.15,5,Madurai Pol,Zenurik Pol,Changes form depending on Stance Mod equipped; Double-ended greatsword when equipped with Heavy Blade stances or wielded as separate dual blades when using Dual Sword stances.
+Dark Split-Sword (Heavy),Heavy Blade,Radiation,80,0,0,0,160,160,160,0.1,2,0.2,5,Madurai Pol,Zenurik Pol,Changes form depending on Stance Mod equipped; Double-ended greatsword when equipped with Heavy Blade stances or wielded as separate dual blades when using Dual Sword stances.
 Dark Sword,Swords,Radiation,37,0,0,0,79,74,148,0.05,1.5,0.1,0,,Unairu Pol,
 Destreza,Rapiers,,75.1,1.9,63.8,9.4,161,150,300,0.2,2,0.05,7,Madurai Pol,Naramon Pol,
 Dex Dakra,Dual Swords,,65,6.5,6.5,52,390,130,260,0.1,2,0.2,0,Naramon Pol,Zenurik Pol,
@@ -27,7 +29,7 @@ Dual Kamas Prime,Dual Swords,,70,3.5,14,52.5,420,140,280,0.15,2,0.2,0,Madurai Po
 Dual Raza,Dual Swords,,48,4.8,14.4,28.8,288,96,192,0.2,3,0.05,6,,Naramon Pol,
 Dual Skana,Dual Swords,,32,4.8,4.8,22.4,192,64,128,0.05,1.5,0.1,0,,Naramon Pol,
 Dual Zoren,Dual Swords,,30,1.5,1.5,27,180,60,120,0.25,3,0.05,2,Vazarin Pol,Zenurik Pol,
-Ether Daggerss,Dual Daggers,,45.1,6.8,6.8,31.5,225,90,180,0.05,1.5,0.05,0,Vazarin Pol,Zenurik Pol,
+Ether Daggers,Dual Daggers,,45.1,6.8,6.8,31.5,225,90,180,0.05,1.5,0.05,0,Vazarin Pol,Zenurik Pol,
 Ether Reaper,Scythes,,65.1,9.8,9.8,45.5,130,130,130,0.15,2,0.15,3,Madurai Pol,Zenurik Pol,
 Ether Sword,Swords,,37.1,5.6,5.6,25.9,79,74,148,0.05,1.5,0.1,0,,Unairu Pol,Will proc Radiation Damage on slam attacks regardless of elemental mods added.
 Fang,Dual Daggers,,30,4.5,21,4.5,150,60,120,0.05,1.5,0.08,0,Vazarin Pol,Unairu Pol,
@@ -45,6 +47,7 @@ Halikar,Glaives,,35,3.5,28,3.5,175,70,105,0.05,1.5,0.15,0,Madurai Pol; Naramon P
 Hate,Scythes,,70,10.5,10.5,49,140,140,140,0.2,2.5,0.15,2,,Naramon Pol,
 Heat Daggers,Daggers,Heat,45,2.3,36,6.7,96,90,135,0.05,1.5,0.05,0,Naramon Pol,Madurai Pol,Heat Damage on Jump Attack
 Heat Sword,Swords,Heat,44,4.4,4.4,35.2,94,88,176,0.05,1.5,0.2,0,Naramon Pol,Madurai Pol,Heat Damage on Jump Attack
+Heliocor,Hammers,,140,119,14,7,280,280,280,0.25,2,0.025,9,,Madurai Pol,Adds Codex scans on kills; The Heliocor will not grant Standing for Cephalon Simaris
 Jat Kittag,Hammers,,130,104,19.5,6.5,260,260,260,0.15,2,0.25,5,Naramon Pol; Madurai Pol,Madurai Pol,
 Jaw Sword,Swords,,44,2.2,8.8,33,94,88,176,0.05,1.5,0.1,0,Madurai Pol,Unairu Pol,
 Kama,Machetes,,45.1,6.8,6.8,31.5,135,90,180,0.05,1.5,0.02,0,Madurai Pol; Madurai Pol,Zenurik Pol,One of the highest Damage Reduction in game with 85%
@@ -67,6 +70,7 @@ Nikana Prime,Nikanas,,95,4.8,4.8,85.5,204,190,204,0.2,2,0.2,0,Madurai Pol; Vazar
 Nikana Dragon,Nikanas,,85.1,4.3,8.5,72.3,182,170,182,0.15,2,0.15,8,Madurai Pol; Vazarin Pol,Madurai Pol,
 Ninkondi,Nunchaku,Electricity,45,0,0,0,96,90,180,0.1,2,0.35,0,,Vazarin Pol,
 Obex,Sparring,,25,17.5,3.8,3.7,100,50,75,0.25,2,0.1,0,,Naramon Pol,Electricity Damage on Jump Attack
+Okina,Dual Daggers,,40,2,18,20,200,80,160,0.05,2,0.15,5,Madurai Pol,Vazarin Pol,
 Orthos,Polearms,,50,7.5,7.5,35,111,100,83,0.05,1.5,0.15,2,,Naramon Pol,Blast Damage on Jump Attack
 Orthos Prime,Polearms,,65.1,9.8,9.8,45.5,144,130,108,0.1,2,0.15,2,,Zenurik Pol,Blast Damage on Jump Attack
 Pangolin Sword,Swords,,37.1,1.9,5.6,29.6,79,74,148,0.05,1.5,0.12,2,Madurai Pol,Madurai Pol,
