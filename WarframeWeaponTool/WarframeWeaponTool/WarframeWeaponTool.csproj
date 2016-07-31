@@ -15,11 +15,11 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\coreyu\Desktop\WarframeWeaponTool\</PublishUrl>
+    <PublishUrl>C:\Users\coreyu\Source\Repos\GIT\Builds\0.1.0.0 PA\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
+    <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
@@ -31,6 +31,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>0.1.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -43,6 +44,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -67,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconv1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -164,7 +170,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="Data\meleeData.csv">
@@ -181,148 +187,245 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Polarities\Madurai_Pol.png" />
+    <Resource Include="Iconv1.ico" />
+    <Content Include="Resources\Polarities\Madurai_Pol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Polarities\Naramon_Pol.png" />
+    <Content Include="Resources\Polarities\Naramon_Pol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Polarities\Unairu_Pol.png" />
+    <Content Include="Resources\Polarities\Unairu_Pol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Polarities\Vazarin_Pol.png" />
+    <Content Include="Resources\Polarities\Vazarin_Pol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Polarities\Zenurik_Pol.png" />
+    <Content Include="Resources\Polarities\Zenurik_Pol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Melee_Stances\Blade_and_Whip\DefiledSnapdragon.png" />
+    <Content Include="Resources\Melee_Stances\Blade_and_Whip\DefiledSnapdragon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Claws\FourRiders.png" />
+    <Content Include="Resources\Melee_Stances\Claws\FourRiders.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Claws\MaliciousRaptor.png" />
+    <Content Include="Resources\Melee_Stances\Claws\MaliciousRaptor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Claws\VermillionStorm.png" />
+    <Content Include="Resources\Melee_Stances\Claws\VermillionStorm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Daggers\HomingFang.png" />
+    <Content Include="Resources\Melee_Stances\Daggers\HomingFang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Daggers\PointedWind.png" />
+    <Content Include="Resources\Melee_Stances\Daggers\PointedWind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Dual_Daggers\GnashingPayara.png" />
+    <Content Include="Resources\Melee_Stances\Dual_Daggers\GnashingPayara.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Dual_Daggers\SinkingTalon.png" />
+    <Content Include="Resources\Melee_Stances\Dual_Daggers\SinkingTalon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Dual_Swords\CrossingSnakes.png" />
+    <Content Include="Resources\Melee_Stances\Dual_Swords\CrossingSnakes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Dual_Swords\SwirlingTiger.png" />
+    <Content Include="Resources\Melee_Stances\Dual_Swords\SwirlingTiger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Fists\FracturingWind.png" />
+    <Content Include="Resources\Melee_Stances\Fists\FracturingWind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Fists\GaiasTragedy.png" />
+    <Content Include="Resources\Melee_Stances\Fists\GaiasTragedy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Fists\SeismicPalm.png" />
+    <Content Include="Resources\Melee_Stances\Fists\SeismicPalm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Glaives\AstralTwilight.png" />
+    <Content Include="Resources\Melee_Stances\Glaives\AstralTwilight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Glaives\GleamingTalon.png" />
+    <Content Include="Resources\Melee_Stances\Glaives\GleamingTalon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Gunblade\HighNoon.png" />
+    <Content Include="Resources\Melee_Stances\Gunblade\HighNoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Hammers\CrushingRuin.png" />
+    <Content Include="Resources\Melee_Stances\Hammers\CrushingRuin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Hammers\ShatteringStorm.png" />
+    <Content Include="Resources\Melee_Stances\Hammers\ShatteringStorm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Heavy_Blade\CleavingWhirlwind.png" />
+    <Content Include="Resources\Melee_Stances\Heavy_Blade\CleavingWhirlwind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Heavy_Blade\RendingCrane.png" />
+    <Content Include="Resources\Melee_Stances\Heavy_Blade\RendingCrane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Heavy_Blade\TempoRoyale.png" />
+    <Content Include="Resources\Melee_Stances\Heavy_Blade\TempoRoyale.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Machetes\SunderingWeave.png" />
+    <Content Include="Resources\Melee_Stances\Machetes\SunderingWeave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Nikanas\BlindJustice.png" />
+    <Content Include="Resources\Melee_Stances\Nikanas\BlindJustice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Nikanas\DecisiveJudgement.png" />
+    <Content Include="Resources\Melee_Stances\Nikanas\DecisiveJudgement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Nikanas\TranquilCleave.png" />
+    <Content Include="Resources\Melee_Stances\Nikanas\TranquilCleave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Nunchaku\AtlantisVulcan.png" />
+    <Content Include="Resources\Melee_Stances\Nunchaku\AtlantisVulcan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Polearms\BleedingWillow.png" />
+    <Content Include="Resources\Melee_Stances\Polearms\BleedingWillow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Polearms\ShimmeringBlight.png" />
+    <Content Include="Resources\Melee_Stances\Polearms\ShimmeringBlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Rapiers\VulpineMask.png" />
+    <Content Include="Resources\Melee_Stances\Rapiers\VulpineMask.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Scythes\ReapingSpiral.png" />
+    <Content Include="Resources\Melee_Stances\Scythes\ReapingSpiral.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Scythes\StalkingFan.png" />
+    <Content Include="Resources\Melee_Stances\Scythes\StalkingFan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Sparring\BrutalTide.png" />
+    <Content Include="Resources\Melee_Stances\Sparring\BrutalTide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Sparring\GrimFury.png" />
+    <Content Include="Resources\Melee_Stances\Sparring\GrimFury.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Staves\ClashingForest.png" />
+    <Content Include="Resources\Melee_Stances\Staves\ClashingForest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Staves\FlailingBranch.png" />
+    <Content Include="Resources\Melee_Stances\Staves\FlailingBranch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Sword_and_Shield\EleventhStorm.png" />
+    <Content Include="Resources\Melee_Stances\Sword_and_Shield\EleventhStorm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Sword_and_Shield\Harbinger.png" />
+    <Content Include="Resources\Melee_Stances\Sword_and_Shield\Harbinger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Swords\CrimsonDervish.png" />
+    <Content Include="Resources\Melee_Stances\Swords\CrimsonDervish.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Swords\IronPhoenix.png" />
+    <Content Include="Resources\Melee_Stances\Swords\IronPhoenix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Swords\VengefulRevenant.png" />
+    <Content Include="Resources\Melee_Stances\Swords\VengefulRevenant.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Tonfas\GeminiCross.png" />
+    <Content Include="Resources\Melee_Stances\Tonfas\GeminiCross.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Whips\BurningWasp.png" />
+    <Content Include="Resources\Melee_Stances\Whips\BurningWasp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Melee_Stances\Whips\CoilingViper.png" />
+    <Content Include="Resources\Melee_Stances\Whips\CoilingViper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Existing Templates\" />

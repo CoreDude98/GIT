@@ -51,7 +51,6 @@ namespace WarframeWeaponTool.Pages
 
         //create array template for file.Read
         string[] meleeWeapons = new string[0];
-
         //Create new list
         List<weaponData> weaponItem = new List<weaponData>();
 
@@ -59,6 +58,7 @@ namespace WarframeWeaponTool.Pages
         string selectedStancePolarity = null;
         string selectedWeaponPolarity = null;
         string selectedWeaponType = null;
+        string polDirectory = @"pack://application:,,,/Resources/Polarities/";
 
 
         //Reads CSV and displays the ListBox contents
@@ -99,18 +99,7 @@ namespace WarframeWeaponTool.Pages
 
                 stancePolLbl.Content = selectedStancePolarity;
                 string stancePol = selectedStancePolarity.Trim().Replace(" ", "_");
-                
-                //WIP
-                    //string stancePolPath2 = selectedStancePolarity.Trim().Replace(" ", "_") + ".png";
-                    //Uri u = new Uri(@"pack://application:,,,/" + stancePolPath2);
-                    //string stancePolPath = "pack://application:,,,//Resources//Polarities//" + stancePol + ".png";
-                    //stancePolImg.Source = new BitmapImage(u);
-                    //stancePolImg.Source = new BitmapImage(new Uri(@(("pack://application:,,,/Resources/Polarities/" + stancePol + ".png").ToString
-                    //stancePolImg.Source = new BitmapImage(new Uri(string.Format("pack://application:,,,/Resources/Polarities/{0}.png", stancePol)));
-                    //new Uri("pack://application:,,,//Resources//Melee_Stances//Blade_and_Whip//DefiledSnapdragon.png"));
-                //
-                //Set stance polarity image source.
-                stancePolImg.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + stancePol + ".png"));
+                stancePolImg.Source = new BitmapImage(new Uri(polDirectory + stancePol + ".png"));
             }
             //Else say 'no stance polarity', set margin to align with title, delete any previous images
             else
@@ -185,16 +174,13 @@ namespace WarframeWeaponTool.Pages
                 }
 
                 //show 1st wepaon polarity image
-                wpnPol1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + wpnPol1FileName + ".png"));
-
+                wpnPol1Img.Source = new BitmapImage(new Uri(polDirectory + wpnPol1FileName + ".png"));
                 //If wpnPol2 exists and is unique
                 if (wpnPol2 != null && wpnPol1 != wpnPol2)
                 {
                     //show 2nd weapon polarity image
-                    wpnPol2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Polarities\\" + wpnPol2FileName + ".png"));
-
+                    wpnPol2Img.Source = new BitmapImage(new Uri(polDirectory + wpnPol2FileName + ".png"));
                 }
-
                 //Set label margins
                 Thickness m = wpnPol1Lbl.Margin;
                 m.Left = 370;
@@ -216,9 +202,6 @@ namespace WarframeWeaponTool.Pages
                 wpnPol1MultiplierLbl.Content = null;
                 wpnPol2MultiplierLbl.Content = null;
             }
-
-
-
         }
 
 
@@ -233,7 +216,6 @@ namespace WarframeWeaponTool.Pages
             string stance1FileName = null;
             string stance2FileName = null;
             string stance3FileName = null;
-
 
             //If wpnType = "specificweapontype", set fileNames
             if (wpnType == "Blade_and_Whip")
@@ -275,7 +257,6 @@ namespace WarframeWeaponTool.Pages
             if (wpnType == "Gunblade")
             {
                 stance1FileName = "HighNoon";
-
             }
             if (wpnType == "Hammers")
             {
@@ -347,19 +328,20 @@ namespace WarframeWeaponTool.Pages
                 stance2FileName = "CoilingViper";
             }
 
+            string stanceDirectory = @"pack://application:,,,/Resources/Melee_Stances/" + wpnType + "/";
+
             //If stances exist, display images
             if (stance1FileName != null)
             {
-                wpnTypeStance1Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance1FileName + ".png"));
+                wpnTypeStance1Img.Source = new BitmapImage(new Uri(stanceDirectory + stance1FileName + ".png"));
             }
             if (stance2FileName != null)
             {
-                wpnTypeStance2Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance2FileName
-                 + ".png"));
+                wpnTypeStance2Img.Source = new BitmapImage(new Uri(stanceDirectory + stance2FileName + ".png"));
             }
             if (stance3FileName != null)
             {
-                wpnTypeStance3Img.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + "\\Resources\\Melee_Stances\\" + wpnType + "\\" + stance3FileName + ".png"));
+                wpnTypeStance3Img.Source = new BitmapImage(new Uri(stanceDirectory + stance3FileName + ".png"));
             }
         }
 
