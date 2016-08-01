@@ -101,10 +101,25 @@ namespace WarframeWeaponTool.Pages
             //Add handler for button click
             but.AddHandler(Button.ClickEvent, new RoutedEventHandler((o, e) =>
             {
-                //grab index of button
-                int dgIndex = meleeDataGridOutput.SelectedIndex;
-                //grab additional info from weaponItem List.
-                string additionInfo = weaponItem[dgIndex].addinfo;
+                //grab selected row
+                weaponData row = (weaponData)meleeDataGridOutput.SelectedItems[0];
+                //grab selected row's name
+                string selectedWeapon = row.name;
+                //set index of row's name for for loop
+                int weaponIndex = 0;
+                for (int i = 0; i < weaponItem.Count; i++)
+                {
+                    //if weaponItem[i] is the same as the selected row's name, set weaponIndex to i.
+                    if (weaponItem[i].name == selectedWeapon)
+                    {
+                        weaponIndex = i;
+                        break;
+                    }
+                }
+
+
+                //grab additional info from weaponItem List with weaponIndex.
+                string additionInfo = weaponItem[weaponIndex].addinfo;
                 //if there is no additional info:
                 if (String.IsNullOrEmpty(additionInfo))
                 {
