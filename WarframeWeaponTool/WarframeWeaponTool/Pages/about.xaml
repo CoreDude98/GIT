@@ -15,8 +15,8 @@
         <Label x:Name="label2_Copy1" Content="Sources" HorizontalAlignment="Left" Margin="38,88,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
         <Label x:Name="label2_Copy2" Content="Corey Uren" HorizontalAlignment="Left" Margin="121,49,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
         <Label x:Name="label3" Content="Pre-Alpha" HorizontalAlignment="Left" Margin="104,9,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light"/>
-        <Label x:Name="label2_Copy3" Content="Build v0.1.0" HorizontalAlignment="Left" Margin="38,9,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
+        <Label x:Name="label2_Copy3" Content="Build v0.1.1" HorizontalAlignment="Left" Margin="38,9,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
         <Label x:Name="label2_Copy4" Content="Patch Notes" HorizontalAlignment="Left" Margin="258,49,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Padding="0,5,5,5"/>
-        <Label x:Name="label2_Copy5" Content="First version release." HorizontalAlignment="Left" Margin="258,70,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
+        <Label x:Name="label2_Copy5" Content="0.1.1 - Bug Fixes&#xD;&#xA;- Fixed Melee Data&#xD;&#xA;- Fixed bug when searching and using extra info button.&#xD;&#xA;&#xD;&#xA;0.1.0 - First version release." HorizontalAlignment="Left" Margin="258,70,0,0" VerticalAlignment="Top" Padding="0,5,5,5" Height="146" Width="315"/>
     </Grid>
 </UserControl>

@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="WarframeWeaponTool.exe" version="0.1.1.0" publicKeyToken="33b4064c38e30bdd" language="en" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Iconv1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="WarframeWeaponTool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="WarframeWeaponTool.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WarframeWeaponTool.exe" size="10005416">
+      <assemblyIdentity name="WarframeWeaponTool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nOMPoh0dz73zuJ59yHaBHgM92IRJ3pj6BGetBtONiuY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Data\meleeData.csv" size="10751">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>j81sKWZD+R6YuQq+1cVJ22rzm59d9+erA5wZ0sQJ+Po=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Iconv1.ico" size="110669">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mJoxCNMu8K3hhpETEx5k+u50V/ykfJKwb31D9f585+U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Blade_and_Whip\DefiledSnapdragon.png" size="208227">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7m8dsIYt+bHU2vREkswUxNgYbxZ+ZzOuTDe9q5BwOSE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Claws\FourRiders.png" size="193443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MP72INwsbEY95pR1zVO5enG0vg7Du3GfD5FvOT4QqmY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Claws\MaliciousRaptor.png" size="185934">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>STknQ6LkcLKCRUgqRTnW7bdDTkblc2D3Pb2lKvD0KVs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Claws\VermillionStorm.png" size="141848">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fTiSMz4FaY9YB8weIZ56AI8aBs015Nw9+Fo8ZJx1hCk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Daggers\HomingFang.png" size="178980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sPYg+pXKUvn0wsXsXeNao44jXY9OcxxjlUzG/Q0mGIE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Daggers\PointedWind.png" size="227259">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QEUobOrDLQzgE0nK/LNiFmwADtEWKcWar26Veus81NA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Dual_Daggers\GnashingPayara.png" size="223531">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2J/QDxOkr9X+2KMqRl3ATo/sfNxVl4dhkwxBB7YHqD8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Dual_Daggers\SinkingTalon.png" size="186571">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6nf0ua3JMmJKbBBazO9FlsA0RghvHv5Qx+PH2386nDY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Dual_Swords\CrossingSnakes.png" size="222825">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NoNkNdjaAYROhQwiMt1MY5bR4STMafo1QgesagNevNA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Dual_Swords\SwirlingTiger.png" size="216808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lO0uz24D3zzJUPsSvBiWNgmgoFNJyhzLwx5I12yduIE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Fists\FracturingWind.png" size="213818">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tME18Yr4OeHJvGy6z1bpd5gPKUTxivb9K7Ocps/zN80=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Fists\GaiasTragedy.png" size="228739">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/9z82VDD8HX4ppyd/w2eviFqSw2uRmNbJ5YT9Qac8LQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Fists\SeismicPalm.png" size="222958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dPJcF7BxdVRs04/yUY90JAn9lWegdEgEAkaE9zw+EaI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Glaives\AstralTwilight.png" size="185257">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SipxOfBBCacDc7j7muytAYsTHMz+EJibTYd9gxhQUp0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Glaives\GleamingTalon.png" size="223443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bxddMHJ3ELyqM1q3ZxJmSqvEIwyJcJVmMsThh1BBY1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Gunblade\HighNoon.png" size="159786">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jVw3yUWdIeXyKyuk8x5QpTCFetFDlfYocIHgUt2sMv0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Hammers\CrushingRuin.png" size="194699">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/MUHH54HjrbobvePM6vzUCBFJLSu92Hi9aQMUTscwv0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Hammers\ShatteringStorm.png" size="215269">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9xw5M/WbpmeaSfKQibAB3v26Q1kBNE0KYRTohRauZro=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Heavy_Blade\CleavingWhirlwind.png" size="221947">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0SzcGIABWzbT2QMRc48wsyVfXVOR41K8W0qw0Ar3px4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Heavy_Blade\RendingCrane.png" size="216500">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>llxvDeWUMKrRYbfa7N8ugi6axOkDPWFjryZEE4l/GsY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Heavy_Blade\TempoRoyale.png" size="195633">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6WylK2IICh/xZ8sKXNPi27Gxvr2tV746ofPVXO5e3+M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Machetes\SunderingWeave.png" size="211551">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZVEr/jKpQQyoF3Qtfn7yR3hqMyhkUnDDrg5zAFpLVJM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Nikanas\BlindJustice.png" size="173927">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YYaV5FVBVxWWKcf43NOzLSj7CbMkgTrHlOPCRr3/d2g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Nikanas\DecisiveJudgement.png" size="143067">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>i+9rWksA+pKcbmpFKHTXz7JowDjfdGy0Wq6HyTgdTkU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Nikanas\TranquilCleave.png" size="223663">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>I+fHlvLWHrcCfBKKal93KFoJztjf7tH8MzKQyBx2hkE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Nunchaku\AtlantisVulcan.png" size="191553">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3b6sdfsIMDruKjq7mcliPX8Me/YxguyM7wTyNzCiqBw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Polearms\BleedingWillow.png" size="192735">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WEWtuY4UiYzhjY6jFmvcN/l4AZ0MjgkMztDpSPRcpvA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Polearms\ShimmeringBlight.png" size="141139">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5rLNPN6XdJA01MrWK1N/8IJSxUknZAw27FggHS6iglI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Rapiers\VulpineMask.png" size="203282">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BYzRtYvJ7mKs1GPa2vOjmkyjSRit2wDk8/hY6QesD+w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Scythes\ReapingSpiral.png" size="213893">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GIBggmyH5tF9kuUasX7xR7T1/S0jP3cZDXg7Ezl3U78=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Scythes\StalkingFan.png" size="179219">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AHZCYggeKDu5QC0yQJrtHTs9B0ppQNT75YVFN5pvsCw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Sparring\BrutalTide.png" size="193678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yI2wMHI0YDSmNAUl+AXBmcMG/9ls1iZyjUWaMKIGLO4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Sparring\GrimFury.png" size="177716">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+T6/a4PSAYosOc4Y01ZFBK4cJOcC1XCvyaNMkJ6V1wI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Staves\ClashingForest.png" size="211308">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a/C2BngvMSf5WJFSJNzbkR5rcEUPq4Nahj6K2mizu0c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Staves\FlailingBranch.png" size="221816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7HY5FKluJKgAkmRMP6ZblXCtAQzHBpk/g0XbQBFsP6s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Sword_and_Shield\EleventhStorm.png" size="215836">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dBgRZueJ+hVI4nE02pEEquABklONm1T5Gra+dPxPgUM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Sword_and_Shield\Harbinger.png" size="185445">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JPc6iGDpu5+3Fi3qkv+vbOpu3v9xx0DpwepbIcXgH/o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Swords\CrimsonDervish.png" size="222443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wFT4mXgI49qFaOkQxQZv5LTgFsNrBfR8SzRDm+R+aEA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Swords\IronPhoenix.png" size="223679">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jWTIl+0PSZKQcyA8htA4i/A+OH3Jp9HKkdzvKmYwckM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Swords\VengefulRevenant.png" size="391257">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TW4M4tCyXIYJn7SfDxJoU3vCohUHyd7zu3f0QtZ2qTQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Tonfas\GeminiCross.png" size="194830">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hIhkagqxjMeyFPyWi90+mvzH11jB/gP2sZ5kVs4u2b8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Whips\BurningWasp.png" size="220463">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DDH/H1K+nRyw8crTxqPsMmi+axTUv5dkl0hJltwepSk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Melee_Stances\Whips\CoilingViper.png" size="218502">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>apdndYXiKip1Y4XLHsnq0OKAfs70DL9DufJy81tIf/4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Polarities\Madurai_Pol.png" size="1006">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qgNaYLjbU1zLJzTtKu7UOfHBs3fYFm/79vD19mFoU9M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Polarities\Naramon_Pol.png" size="904">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Bw1GF/gpy16TwSlQl7f5bzdrgE52hc1wtuIKbgvnI6U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Polarities\Unairu_Pol.png" size="982">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>++DkKWmwOqsoTrZ1tGU98zlneuvZ3K5ZQFp9cpqojWg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Polarities\Vazarin_Pol.png" size="1008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>S2MnqSZwIhIx4PdLTr5eVfkLufisdtL5urcb4Wk6N94=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Polarities\Zenurik_Pol.png" size="968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c6ZXkE5Q2t3HUmrQDnVvRT0DeZtM+lPa7yUm4yY3Cx0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="WarframeWeaponTool.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=TEACH\coreyu" issuerKeyHash="72506c6a7063ae2bd77a153329aa4570bded7efb" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>reptgXgxsqi2m1nyXqPp+26oFY3hkP7d53ZpFtvzQDg=</DigestValue></Reference></SignedInfo><SignatureValue>NrdmiFNZ88Dl9oNXJc6SttbEdTqmGl33ruopoYDkVmtjl6RL+sLWnGY5WkjW7v0KtVGfbQGGkiO7zFzRs+6P8KLrNqvxdXoE/KVduOMs3vTKAr4A2TumTnd5LstOSwVlgXdCN9l+LPA7Q9U3Ac8MNrnRty9b4L95jJJISuaChQo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>mJICyTbivWpwdbUQJD2dtHFAarbIirEuhf4233bmRtp/YyEz4jtlYEyIIHPZ8Hyywx10ydNNtIGqQm/RpghHPdEtUwIpspF1yEUf0+Z0/+HzAxjZGjiSQBmyMMc7Rm5I1YDHL3uq9B0neE9rmCJzBAgyYEVeEzJdakSKRthuHw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3840f3db166976e7ddfe90e18d15a86efbe9a35ef2599bb6a8b23178816deaad" Description="" Url=""><as:assemblyIdentity name="WarframeWeaponTool.exe" version="0.1.1.0" publicKeyToken="33b4064c38e30bdd" language="en" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TEACH\coreyu</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>wgopx7yHUNlo5Ua6mwiT6hA8hrggZh87Ugk+ChTHFzc=</DigestValue></Reference></SignedInfo><SignatureValue>IRW1DED7TiiuFN2J8UXrtX0r3xa0mES1CG4ERejXy4NVlWaT/fzuot8W+QJ7ZbHIIbzONghWpr65OI3nliyBWaRpKcQubL5yzRLoHkr4qtJXjw6154+7pA1YhoICIm+FLKRTfeeIAUBjd8CllovB8Sg1p8WjKVT0N2IUMHss09Y=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>mJICyTbivWpwdbUQJD2dtHFAarbIirEuhf4233bmRtp/YyEz4jtlYEyIIHPZ8Hyywx10ydNNtIGqQm/RpghHPdEtUwIpspF1yEUf0+Z0/+HzAxjZGjiSQBmyMMc7Rm5I1YDHL3uq9B0neE9rmCJzBAgyYEVeEzJdakSKRthuHw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQTU71gRQ+e7BJd/pkoxFlYTANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAVABFAEEAQwBIAFwAYwBvAHIAZQB5AHUwHhcNMTYwNzMwMTQxNTQ1WhcNMTcwNzMwMjAxNTQ1WjAjMSEwHwYDVQQDHhgAVABFAEEAQwBIAFwAYwBvAHIAZQB5AHUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJiSAsk24r1qcHW1ECQ9nbRxQGq2yIqxLoX+Nt925kbaf2MhM+I7ZWBMiCBz2fB8ssMddMnTTbSBqkJv0aYIRz3RLVMCKbKRdchFH9PmdP/h8wMY2Ro4kkAZsjDHO0ZuSNWAxy97qvQdJ3hPa5gicwQIMmBFXhMyXWpEikbYbh8NAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAb3gvQmLOTR+7elP7FvoGsthlMfbW/BOy9lba361pjFjmAzQ5iHHHCNi2qQFAd+4f3PuNYnYTsT9lyFTrokd7NWj+OmpjVBtTpteEGLfchS3VfkUa5BRBoP42SyWN5RrL79qLZ4VfAbhpTxr7N8yGzcng6nOvjmqDQrtfHGPsInM=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
